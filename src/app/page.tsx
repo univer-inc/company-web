@@ -1,11 +1,13 @@
-import Image from "next/image";
+"use client";
+
+import tw from "twin.macro";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="text-white text-5xl font-bold">
-        UNIVER inc. Website
-      </div>
-    </main>
+    <Main>
+      <div className="text-white text-5xl font-bold">UNIVER inc. Website</div>
+    </Main>
   );
 }
+
+const Main = tw.main`bg-amber-400`;
