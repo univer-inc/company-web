@@ -1,13 +1,14 @@
-"use client";
+'use client';
 
-import tw from "twin.macro";
+import { Hero, Info } from './_sections';
 
-export default function Home() {
+const Home = () => {
   return (
-    <Main>
-      <div className="text-white text-5xl font-bold">UNIVER inc. Website</div>
-    </Main>
+    <>
+      <Hero />
+      <Info />
+    </>
   );
-}
+};
 
-const Main = tw.main`bg-amber-400`;
+export default Home;
