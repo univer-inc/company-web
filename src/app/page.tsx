@@ -1,11 +1,18 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { Hero, About, Info, Business, News, Contact } from './_sections';
+
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="text-white text-5xl font-bold">
-        UNIVER inc. Website
-      </div>
-    </main>
+    <>
+      <Hero />
+      <About />
+      <Info />
+      <Business />
+      <News />
+      <Contact />
+    </>
   );
-}
+};
+
+export default Home;
