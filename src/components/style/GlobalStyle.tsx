@@ -14,10 +14,13 @@ export const GlobalStyles = () => {
 };
 
 const Global = createGlobalStyle`
-body {
-  ${tw`
-    font-sans
-    text-justify
-  `}/* font-feature-settings: 'palt'; */
-  }
+  html {
+    scroll-behavior: smooth;
+  };
+  body {
+    ${tw`
+      font-sans
+      text-justify
+    `}/* font-feature-settings: 'palt'; */
+  };
 `;

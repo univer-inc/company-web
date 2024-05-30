@@ -1,105 +1,75 @@
 import tw from 'twin.macro';
-import OriginalLogo from '@/components/icon/logo.svg';
 import { Section } from '@/components/part/Section';
 import { Heading } from '@/components/part/Heading';
 
 // import tw from 'twin.macro';
 
+const infoList: { title: string; definition: string }[] = [
+  {
+    title: '会社名',
+    definition: '株式会社ウニベル / UNIVER inc.',
+  },
+  {
+    title: '代表',
+    definition: '横山真輔',
+  },
+  {
+    title: '住所',
+    definition: '〒169-0051 東京都新宿区西早稲田1-22-3',
+  },
+];
+
 export const Info = () => {
   return (
-    <Section>
-      <div tw="h-6">aa</div>
-      <Heading en="WHO WE ARE" ja="私たちについて" />
-      <MainMessage>
-        <ObjectLayer tw="top-0 bottom-0 my-auto right-[calc(100% - 20px)]">
-          <ObjectTriangle />
-        </ObjectLayer>
-        <ObjectLayer>
-          <ObjectSquare />
-        </ObjectLayer>
-        <ObjectLayer>
-          <ObjectCircle />
-        </ObjectLayer>
-        <MessageBox>
-          <Logo />
-          <Message>
-            <MessageGroup>
-              <p>“UNIVER”と書いてウニベルと読みます。</p>
-            </MessageGroup>
-            <MessageGroup>
-              <p>
-                大学の語源となったラテン語のウニベルシタス（universitas）がモチーフです。
-              </p>
-              <p>
-                ウニベルシタスは「ひとつの目的を持った共同体」という意味があります。
-              </p>
-              <p>
-                私たちUNIVERは「学び」というひとつの目的のもと、「移動」によって人々の思考の枠を解放することに貢献していきます。
-              </p>
-            </MessageGroup>
-            <MessageGroup>
-              <p>
-                異なる価値観や知識が移動によって混ざり合うことで、学生、教員、大学、地域、そして社会にも、新たな可能性を広げるきっかけを創り続けていきます。
-              </p>
-            </MessageGroup>
-          </Message>
-        </MessageBox>
-        <div>写真</div>
-      </MainMessage>
+    <Section id="info">
+      <Heading en="COMPANY INFO" ja="企業情報" />
+      <InfoArea>
+        {infoList.map(({ title, definition }) => (
+          <InfoItem key={title}>
+            <InfoTitle>{title}</InfoTitle>
+            <InfoDefinition>{definition}</InfoDefinition>
+          </InfoItem>
+        ))}
+      </InfoArea>
+      <MapArea>
+        <GoogleMap
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3217.322259824635!2d139.71881333626652!3d35.70898750999739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d536ca055f1%3A0x734f79646c9d5888!2z5pep56iy55Sw5aSn5a2m44Oq44K144O844OB44Kk44OO44OZ44O844K344On44Oz44K744Oz44K_44O877yIMTIx5Y-36aSo77yJ!5e0!3m2!1sja!2sjp!4v1717075013840!5m2!1sja!2sjp"
+          width="600"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </MapArea>
     </Section>
   );
 };
 
-const Logo = tw(OriginalLogo)`
-  w-[335px]
-`;
-
-const MainMessage = tw.div`
+const InfoArea = tw.div`
   flex
-  relative
+  justify-between
   gap-4
   mt-[120px]
 `;
 
-const MessageBox = tw.div`
-  relative
-  w-[460px]
-  flex
-  flex-col
-  gap-12
+const InfoItem = tw.dl``;
+
+const InfoTitle = tw.dt`
+  text-sm
 `;
 
-const Message = tw.div`
-  w-[460px]
-  flex
-  flex-col
-  gap-8
+const InfoDefinition = tw.dd`
+  text-[18px]
+  font-bold
 `;
 
-const MessageGroup = tw.div`
+const MapArea = tw.div`
+  mt-12
+  ml-[calc(-50vw + 50%)]
+  mr-[calc(-50vw + 50%)]
 `;
 
-const ObjectLayer = tw.div`
-  absolute
-`;
-
-const ObjectTriangle = tw.div`
-  bg-orange
-  w-[214px]
-  // https://qiita.com/degudegu2510/items/09f34d4b218c9df6bb57
-  h-[calc(tan(60deg) * 214px / 2)]
-  [clip-path: polygon(50% 0, 100% 100%, 0 100%)]
-`;
-
-const ObjectSquare = tw.div`
-  bg-orange
-  w-[146px]
-  h-[146px]
-`;
-
-const ObjectCircle = tw.div`
-  bg-black
-  w-[164px]
-  h-[164px]
-  rounded-[50%]
+const GoogleMap = tw.iframe`
+  w-full
 `;

@@ -10,11 +10,11 @@ export const menuData: MenuItem[] = [
   },
   {
     label: '事業内容',
-    id: 'about',
+    id: 'business',
   },
   {
     label: 'お知らせ',
-    id: 'announce',
+    id: 'news',
   },
   {
     label: 'お問い合わせ',

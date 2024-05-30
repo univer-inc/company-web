@@ -16,7 +16,7 @@ export const Header = () => {
             <MenuList>
               {menuData.map(({ id, label }) => (
                 <li key={id}>
-                  <a href={id}>{label}</a>
+                  <a href={`#${id}`}>{label}</a>
                 </li>
               ))}
             </MenuList>
