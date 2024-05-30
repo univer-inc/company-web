@@ -1,10 +1,14 @@
 'use client';
 import tw from 'twin.macro';
+import LogoArchitecture from '@/components/icon/logoArchitecture.svg';
 
 export const Hero = () => {
   return (
     <Container>
       <Inner>
+        <LogoArchitectureContainer>
+          <LogoArchitecture />
+        </LogoArchitectureContainer>
         <MainTitle>
           <MainTitleEn>OUR MISSION</MainTitleEn>
           <MainTitleJa>
@@ -20,6 +24,7 @@ export const Hero = () => {
 
 const Container = tw.div`
   bg-orange
+  overflow-hidden
 `;
 
 const Inner = tw.div`
@@ -48,4 +53,14 @@ const MainTitleJa = tw.span`
   block
   text-[50px]
   font-bold
+`;
+
+const LogoArchitectureContainer = tw.div`
+  absolute
+  top-0
+  bottom-0
+  -right-[30%]
+  m-auto
+  w-[1250px]
+  h-[840px]
 `;

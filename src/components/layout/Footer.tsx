@@ -9,6 +9,9 @@ export const Footer = () => {
       <Inner>
         <FooterNav>
           <FooterList>
+            <FooterListItem>
+              copyright {new Date().getFullYear()} UNIVER Inc.
+            </FooterListItem>
             {footerData.map(({ id, label }) => (
               <FooterListItem key={id}>
                 <FooterLink href={`/${id}`}>{label}</FooterLink>

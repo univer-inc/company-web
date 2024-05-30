@@ -14,16 +14,16 @@ import type { Metadata } from 'next';
 // });
 
 export const metadata: Metadata = {
-  title: 'TODO',
-  description: 'TODO',
-  // preco
+  title: '株式会社ウニベル / UNIVER inc.',
+  description:
+    '移動で学びをリデザインする株式会社ウニベルの公式ウェブサイトです。企業情報、事業内容、お知らせなど、ウニベルの最新情報をご覧いただけます。',
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="ja">
       <head>
@@ -49,6 +49,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
 
-// const Main = tw.main`bg-orange`;
+export default RootLayout;

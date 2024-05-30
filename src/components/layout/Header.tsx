@@ -3,8 +3,10 @@ import tw from 'twin.macro';
 import Logo from '@/components/icon/logo.svg';
 import { menuData } from '@/data/menu';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export const Header = () => {
+  const pathname = usePathname();
   return (
     <Container>
       <Inner>
@@ -16,7 +18,7 @@ export const Header = () => {
             <MenuList>
               {menuData.map(({ id, label }) => (
                 <li key={id}>
-                  <a href={`#${id}`}>{label}</a>
+                  <a href={`${pathname === '/' ? '' : '/'}#${id}`}>{label}</a>
                 </li>
               ))}
             </MenuList>
