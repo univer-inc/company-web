@@ -9,7 +9,7 @@ export const Footer = () => {
       <Inner>
         <FooterNav>
           <FooterList>
-            <FooterListItem>
+            <FooterListItem tw="text-sm">
               copyright {new Date().getFullYear()} UNIVER Inc.
             </FooterListItem>
             {footerData.map(({ id, label }) => (
@@ -30,6 +30,8 @@ const Inner = tw.div`
   max-w-content
   mx-auto
   py-6
+  lg-df:px-10
+  sm-df:px-5
 `;
 
 const FooterNav = tw.nav`
@@ -42,6 +44,7 @@ const FooterList = tw.ul`
   flex
   justify-between
   gap-10
+  sm-df:flex-col-reverse
 `;
 
 const FooterListItem = tw.li`
@@ -49,4 +52,5 @@ const FooterListItem = tw.li`
 
 const FooterLink = tw(Link)`
   block
+  sm-df:text-center
 `;

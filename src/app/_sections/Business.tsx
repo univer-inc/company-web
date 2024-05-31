@@ -37,12 +37,12 @@ export const Business = () => {
       <BusinessList>
         <BusinessItem>
           <BusinessTitle>
-            <BusinessIndex tw="text-[34px] after:left-8">
+            <BusinessIndex tw="sm:text-[34px] sm:after:left-8">
               {first.index}
             </BusinessIndex>
-            <BusinessName tw="text-[22px]">{first.title}</BusinessName>
+            <BusinessName tw="sm:text-[22px]">{first.title}</BusinessName>
           </BusinessTitle>
-          <BusinessDescription tw="text-center text-[18px]">
+          <BusinessDescription tw="sm:text-center sm:text-[18px]">
             <TextBreak>{first.description}</TextBreak>
           </BusinessDescription>
         </BusinessItem>
@@ -73,6 +73,10 @@ const BusinessListColumn = tw.div`
   grid
   grid-cols-3
   gap-6
+  sm-df:[grid-auto-flow: row]
+  // sm-df:grid-col
+  // sm-df:grid-rows-3
+  sm-df:grid-cols-none
 `;
 
 const BusinessItem = tw.dl`

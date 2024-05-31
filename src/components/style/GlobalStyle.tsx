@@ -21,6 +21,7 @@ const Global = createGlobalStyle`
     ${tw`
       font-sans
       text-justify
+      leading-relaxed
     `}/* font-feature-settings: 'palt'; */
   };
 `;

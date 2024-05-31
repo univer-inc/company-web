@@ -18,7 +18,9 @@ export const Header = () => {
             <MenuList>
               {menuData.map(({ id, label }) => (
                 <li key={id}>
-                  <a href={`${pathname === '/' ? '' : '/'}#${id}`}>{label}</a>
+                  <MenuItem href={`${pathname === '/' ? '' : '/'}#${id}`}>
+                    {label}
+                  </MenuItem>
                 </li>
               ))}
             </MenuList>
@@ -35,6 +37,8 @@ const Inner = tw.div`
   max-w-content
   mx-auto
   py-6
+  lg-df:px-10
+  sm-df:px-5
 `;
 
 const Grid = tw.div`
@@ -44,6 +48,7 @@ const Grid = tw.div`
 `;
 
 const Menu = tw.nav`
+  md-df:hidden
 `;
 
 const MenuList = tw.ul`
@@ -54,11 +59,10 @@ const MenuList = tw.ul`
 `;
 
 const MenuItem = tw(Link)`
-  block
-  w-[240px]
 `;
 
 const SiteLogo = tw(Link)`
   block
   w-[240px]
+  sm-df:w-[146px]
 `;

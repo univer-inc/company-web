@@ -15,13 +15,17 @@ const Container = tw.h2`
   inline-flex
   gap-7
   items-center
+  sm-df:flex-col
+  sm-df:items-start
+  sm-df:gap-4
 `;
 
 const En = tw.span`
   block
   text-[50px]
-  font-roboto
+  font-roboto 
   leading-none
+  sm-df:text-[30px]
 `;
 
 const Separator = tw.span`
@@ -29,6 +33,8 @@ const Separator = tw.span`
   w-px
   h-[40px]
   bg-black
+  sm-df:h-px
+  sm-df:w-[50px]
 `;
 
 const Ja = tw.span`

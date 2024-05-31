@@ -51,6 +51,8 @@ const InfoArea = tw.div`
   justify-between
   gap-4
   mt-[120px]
+  sm-df:flex-col
+  sm-df:mt-[60px]
 `;
 
 const InfoItem = tw.dl``;

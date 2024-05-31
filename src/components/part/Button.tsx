@@ -11,7 +11,7 @@ export const Button = tw.a`
   bg-orange
   rounded-[100px]
   text-xl
-
+  sm-df:py-6
 `;
 
 export const ButtonContainer = tw.div`
