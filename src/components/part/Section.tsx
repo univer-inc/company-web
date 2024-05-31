@@ -5,6 +5,7 @@ export const Section = tw.section`
   mx-auto
   py-20
   lg-df:px-10
+  lg-df:overflow-hidden
   sm-df:px-5
   sm-df:py-10
 `;

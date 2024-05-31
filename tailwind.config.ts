@@ -46,27 +46,28 @@ const config: Config = {
 
       // Desktop first
       // https://gist.github.com/heytulsiprasad/e8bae1eba7b90ef66b8b1b1ae0861d96
+      // 優先度的に降順となる
 
-      'sm-df': { max: '639px' },
-      // => @media (max-width: 639px) { ... }
-
-      'md-df': { max: '767px' },
-      // => @media (max-width: 767px) { ... }
-
-      'lg-df': { max: '1023px' },
-      // => @media (max-width: 1023px) { ... }
-
-      'xl-df': { max: '1279px' },
-      // => @media (max-width: 1279px) { ... }
-
-      '2xl-df': { max: '1535px' },
-      // => @media (max-width: 1536px) { ... }
+      'content-df': { max: '1399px' },
+      // => @media (max-width: 1400px) { ... }
 
       '3xl-df': { max: '1919px' },
       // => @media (max-width: 1920px) { ... }
 
-      'content-df': { max: '1399px' },
-      // => @media (max-width: 1400px) { ... }
+      '2xl-df': { max: '1535px' },
+      // => @media (max-width: 1536px) { ... }
+
+      'xl-df': { max: '1279px' },
+      // => @media (max-width: 1279px) { ... }
+
+      'lg-df': { max: '1023px' },
+      // => @media (max-width: 1023px) { ... }
+
+      'md-df': { max: '767px' },
+      // => @media (max-width: 767px) { ... }
+
+      'sm-df': { max: '639px' },
+      // => @media (max-width: 639px) { ... }
     },
     extend: {
       fontSize: {

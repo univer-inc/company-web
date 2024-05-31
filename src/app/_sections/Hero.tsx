@@ -1,21 +1,26 @@
 'use client';
 import tw from 'twin.macro';
 import LogoArchitecture from '@/components/icon/logoArchitecture.svg';
+import { IntersectionFadeIn } from '@/components/effect/IntersectionFadeIn';
 
 export const Hero = () => {
   return (
     <Container>
       <Inner>
         <LogoArchitectureContainer>
-          <LogoArchitecture />
+          <IntersectionFadeIn scaling>
+            <LogoArchitecture />
+          </IntersectionFadeIn>
         </LogoArchitectureContainer>
         <MainTitle>
-          <MainTitleEn>OUR MISSION</MainTitleEn>
-          <MainTitleJa>
-            移動で学びを
-            <br />
-            リデザインする
-          </MainTitleJa>
+          <IntersectionFadeIn delay={500}>
+            <MainTitleEn>OUR MISSION</MainTitleEn>
+            <MainTitleJa>
+              移動で学びを
+              <br />
+              リデザインする
+            </MainTitleJa>
+          </IntersectionFadeIn>
         </MainTitle>
       </Inner>
     </Container>

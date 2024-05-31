@@ -6,10 +6,9 @@ import {
   PrivacyPolicyContents,
   privacyPolicy,
 } from '@/data/privacyPolicy';
+import { isString } from '@/lib/typeCheck';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-
-const isString = (arg: any): arg is string => typeof arg === 'string';
 
 const CommonContent = ({ content }: { content: PrivacyPolicyContent }) => {
   if (isString(content)) return content;

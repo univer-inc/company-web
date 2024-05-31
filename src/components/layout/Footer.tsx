@@ -2,6 +2,8 @@
 import tw from 'twin.macro';
 import { footerData } from '@/data/menu';
 import Link from 'next/link';
+import styled from 'styled-components';
+import { styleMixins } from '@/lib/styleMixin';
 
 export const Footer = () => {
   return (
@@ -50,7 +52,10 @@ const FooterList = tw.ul`
 const FooterListItem = tw.li`
 `;
 
-const FooterLink = tw(Link)`
-  block
-  sm-df:text-center
+const FooterLink = styled(Link)`
+  ${tw`
+    block
+    sm-df:text-center
+  `}
+  ${styleMixins.hoverEffect}
 `;

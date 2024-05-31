@@ -1,3 +1,5 @@
+import { styleMixins } from '@/lib/styleMixin';
+import styled from 'styled-components';
 import tw from 'twin.macro';
 
 export const Button = tw.a`
@@ -14,9 +16,11 @@ export const Button = tw.a`
   sm-df:py-6
 `;
 
-export const ButtonContainer = tw.div`
-  py-8
-  flex
-  justify-center
-  items-center
+export const ButtonContainer = styled.div`
+  ${tw`
+    py-8
+    flex
+    justify-center
+    items-center`}
+  ${styleMixins.hoverEffect}
 `;

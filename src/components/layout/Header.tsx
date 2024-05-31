@@ -4,6 +4,8 @@ import Logo from '@/components/icon/logo.svg';
 import { menuData } from '@/data/menu';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import styled from 'styled-components';
+import { styleMixins } from '@/lib/styleMixin';
 
 export const Header = () => {
   const pathname = usePathname();
@@ -58,7 +60,8 @@ const MenuList = tw.ul`
   gap-10
 `;
 
-const MenuItem = tw(Link)`
+const MenuItem = styled(Link)`
+  ${styleMixins.hoverEffect}
 `;
 
 const SiteLogo = tw(Link)`
