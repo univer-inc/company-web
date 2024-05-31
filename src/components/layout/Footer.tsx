@@ -2,6 +2,8 @@
 import tw from 'twin.macro';
 import { footerData } from '@/data/menu';
 import Link from 'next/link';
+import styled from 'styled-components';
+import { styleMixins } from '@/lib/styleMixin';
 
 export const Footer = () => {
   return (
@@ -9,7 +11,7 @@ export const Footer = () => {
       <Inner>
         <FooterNav>
           <FooterList>
-            <FooterListItem>
+            <FooterListItem tw="text-sm">
               copyright {new Date().getFullYear()} UNIVER Inc.
             </FooterListItem>
             {footerData.map(({ id, label }) => (
@@ -30,6 +32,8 @@ const Inner = tw.div`
   max-w-content
   mx-auto
   py-6
+  lg-df:px-10
+  sm-df:px-5
 `;
 
 const FooterNav = tw.nav`
@@ -42,11 +46,16 @@ const FooterList = tw.ul`
   flex
   justify-between
   gap-10
+  sm-df:flex-col-reverse
 `;
 
 const FooterListItem = tw.li`
 `;
 
-const FooterLink = tw(Link)`
-  block
+const FooterLink = styled(Link)`
+  ${tw`
+    block
+    sm-df:text-center
+  `}
+  ${styleMixins.hoverEffect}
 `;

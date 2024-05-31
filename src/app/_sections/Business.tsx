@@ -2,6 +2,7 @@ import tw from 'twin.macro';
 import { Section } from '@/components/part/Section';
 import { Heading } from '@/components/part/Heading';
 import { TextBreak } from '@/lib/text';
+import { IntersectionFadeIn } from '@/components/effect/IntersectionFadeIn';
 
 const businessList: { index: number; title: string; description: string }[] = [
   {
@@ -35,26 +36,30 @@ export const Business = () => {
     <Section id="business">
       <Heading en="BUSINESS" ja="事業内容" />
       <BusinessList>
-        <BusinessItem>
-          <BusinessTitle>
-            <BusinessIndex tw="text-[34px] after:left-8">
-              {first.index}
-            </BusinessIndex>
-            <BusinessName tw="text-[22px]">{first.title}</BusinessName>
-          </BusinessTitle>
-          <BusinessDescription tw="text-center text-[18px]">
-            <TextBreak>{first.description}</TextBreak>
-          </BusinessDescription>
-        </BusinessItem>
+        <IntersectionFadeIn>
+          <BusinessItem>
+            <BusinessTitle>
+              <BusinessIndex tw="sm:text-[34px] sm:after:left-8">
+                {first.index}
+              </BusinessIndex>
+              <BusinessName tw="sm:text-[22px]">{first.title}</BusinessName>
+            </BusinessTitle>
+            <BusinessDescription tw="sm:text-center sm:text-[18px]">
+              <TextBreak>{first.description}</TextBreak>
+            </BusinessDescription>
+          </BusinessItem>
+        </IntersectionFadeIn>
         <BusinessListColumn>
-          {rest.map(({ index, title, description }) => (
-            <BusinessItem key={title}>
-              <BusinessTitle>
-                <BusinessIndex>{index}</BusinessIndex>
-                <BusinessName>{title}</BusinessName>
-              </BusinessTitle>
-              <BusinessDescription>{description}</BusinessDescription>
-            </BusinessItem>
+          {rest.map(({ index, title, description }, i) => (
+            <IntersectionFadeIn key={title} delay={200 * i}>
+              <BusinessItem>
+                <BusinessTitle>
+                  <BusinessIndex>{index}</BusinessIndex>
+                  <BusinessName>{title}</BusinessName>
+                </BusinessTitle>
+                <BusinessDescription>{description}</BusinessDescription>
+              </BusinessItem>
+            </IntersectionFadeIn>
           ))}
         </BusinessListColumn>
       </BusinessList>
@@ -73,6 +78,10 @@ const BusinessListColumn = tw.div`
   grid
   grid-cols-3
   gap-6
+  sm-df:[grid-auto-flow: row]
+  // sm-df:grid-col
+  // sm-df:grid-rows-3
+  sm-df:grid-cols-none
 `;
 
 const BusinessItem = tw.dl`

@@ -1,29 +1,31 @@
-type PrivacyPolicyOrderedList = {
+export type PrivacyPolicyOrderedList = {
   type: 'ordered-list';
-  content: PrivacyPolicyContent[];
+  content: PrivacyPolicyContents;
 };
 
-type PrivacyPolicyContentArray = {
-  type: 'content-array';
-  content: PrivacyPolicyContent[];
+export type PrivacyPolicyMixedContent = {
+  type: 'mixed-content';
+  content: PrivacyPolicyContents;
 };
 
-type PrivacyPolicyContent =
+export type PrivacyPolicyContent =
   | PrivacyPolicyOrderedList
-  | PrivacyPolicyContentArray
+  | PrivacyPolicyMixedContent
   | string;
+
+export type PrivacyPolicyContents = PrivacyPolicyContent[];
 
 type PrivacyPolicyUnit =
   | {
       heading?: string;
-      content: PrivacyPolicyContent[];
+      content: PrivacyPolicyContents;
     }
   | string;
 
 type PrivacyPolicy = PrivacyPolicyUnit[];
 
 export const privacyPolicy: PrivacyPolicy = [
-  '株式会社ウニベル（以下「当社」といいます。）は、当社が【サービス名称を記載】（以下「本サービス」といいます。）を提供し、ご利用される皆様（以下「利用者」といいます。）の個人に関する情報（以下「個人情報」といいます。）を取得するにあたり、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。',
+  '株式会社ウニベル（以下「当社」といいます。）は、当社が【サービス名称を記載】TODO!（以下「本サービス」といいます。）を提供し、ご利用される皆様（以下「利用者」といいます。）の個人に関する情報（以下「個人情報」といいます。）を取得するにあたり、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。',
   {
     heading: '適用範囲',
     content: [
@@ -110,7 +112,7 @@ export const privacyPolicy: PrivacyPolicy = [
         type: 'ordered-list',
         content: [
           {
-            type: 'content-array',
+            type: 'mixed-content',
             content: [
               '当社は、次に掲げる場合を除いて、あらかじめ利用者の同意を得ないで、取得した個人情報を第三者に提供することはありません。',
               {
@@ -126,7 +128,7 @@ export const privacyPolicy: PrivacyPolicy = [
             ],
           },
           {
-            type: 'content-array',
+            type: 'mixed-content',
             content: [
               '前項の定めにかかわらず、次に掲げる場合には、当該個人情報の提供先は第三者に該当しないものとします。',
               {
@@ -162,7 +164,7 @@ export const privacyPolicy: PrivacyPolicy = [
         type: 'ordered-list',
         content: [
           {
-            type: 'content-array',
+            type: 'mixed-content',
             content: [
               '利用者は、本条及び当社の関連規程に従って、当社に対し、個人情報保護法において認められる限度で、以下の求め又は請求を行うことができます。',
               {
@@ -195,4 +197,4 @@ export const privacyPolicy: PrivacyPolicy = [
   },
 ];
 
-const timestamp = ['制定： 年 月 日'];
+export const privacyPolicyTimestamp = ['制定： 年 月 日 TODO'];

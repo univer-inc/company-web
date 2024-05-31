@@ -4,6 +4,8 @@ import Logo from '@/components/icon/logo.svg';
 import { menuData } from '@/data/menu';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import styled from 'styled-components';
+import { styleMixins } from '@/lib/styleMixin';
 
 export const Header = () => {
   const pathname = usePathname();
@@ -18,7 +20,9 @@ export const Header = () => {
             <MenuList>
               {menuData.map(({ id, label }) => (
                 <li key={id}>
-                  <a href={`${pathname === '/' ? '' : '/'}#${id}`}>{label}</a>
+                  <MenuItem href={`${pathname === '/' ? '' : '/'}#${id}`}>
+                    {label}
+                  </MenuItem>
                 </li>
               ))}
             </MenuList>
@@ -35,6 +39,8 @@ const Inner = tw.div`
   max-w-content
   mx-auto
   py-6
+  lg-df:px-10
+  sm-df:px-5
 `;
 
 const Grid = tw.div`
@@ -44,6 +50,7 @@ const Grid = tw.div`
 `;
 
 const Menu = tw.nav`
+  md-df:hidden
 `;
 
 const MenuList = tw.ul`
@@ -53,12 +60,12 @@ const MenuList = tw.ul`
   gap-10
 `;
 
-const MenuItem = tw(Link)`
-  block
-  w-[240px]
+const MenuItem = styled(Link)`
+  ${styleMixins.hoverEffect}
 `;
 
 const SiteLogo = tw(Link)`
   block
   w-[240px]
+  sm-df:w-[146px]
 `;

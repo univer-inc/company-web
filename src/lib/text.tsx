@@ -25,5 +25,5 @@ export const RemoveTextBreak = ({
   return <>{result}</>;
 };
 
-export const BrOnlySmallScreen = tw.br`hidden md:inline`;
-export const BrOnlyNormalScreen = tw.br`md:hidden`;
+export const BrOnlySmallScreen = tw.br`hidden md-df:inline`;
+export const BrOnlyNormalScreen = tw.br`md-df:hidden`;
