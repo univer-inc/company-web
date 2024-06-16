@@ -33,7 +33,7 @@ export const Info = () => {
       </InfoArea>
       <MapArea>
         <GoogleMap
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3217.322259824635!2d139.71881333626652!3d35.70898750999739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d536ca055f1%3A0x734f79646c9d5888!2z5pep56iy55Sw5aSn5a2m44Oq44K144O844OB44Kk44OO44OZ44O844K344On44Oz44K744Oz44K_44O877yIMTIx5Y-36aSo77yJ!5e0!3m2!1sja!2sjp!4v1717075013840!5m2!1sja!2sjp"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.794908321308!2d139.71657887305943!3d35.71171027453219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d1a11b9387f%3A0xbe020ff7191ec9bc!2z44CSMTY5LTAwNTEg5p2x5Lqs6YO95paw5a6_5Yy66KW_5pep56iy55Sw77yR5LiB55uu77yS77yS4oiS77yTIOilv-aXqeeosueUsOODkeODvOOCr-OCv-ODr-ODvA!5e0!3m2!1sja!2sjp!4v1718501655239!5m2!1sja!2sjp"
           width="600"
           height="450"
           style={{ border: 0 }}
