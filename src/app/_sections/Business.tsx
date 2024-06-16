@@ -26,7 +26,7 @@ const businessList: { index: number; title: string; description: string }[] = [
     index: 4,
     title: 'グローバル事業',
     description:
-      'アジア諸国のリサーチ支援やマーケティング・プロモーションの立案·実行を支援します',
+      'アジア諸国の最新の現場視察研修ツアーをプランニングから実行まで支援します',
   },
 ];
 
