@@ -50,6 +50,10 @@ const NewsList = tw.dl`
   items-center
   mx-12
   my-16
+  sm-df:flex-col
+  sm-df:items-start
+  sm-df:gap-6
+  sm-df:mx-3
 `;
 
 const NewsTitle = tw.dt`
