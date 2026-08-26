@@ -1,6 +1,4 @@
-import { Footer } from '@/components/layout/Footer';
-import { Header } from '@/components/layout/Header';
-import { Main } from '@/components/layout/Main';
+import { LayoutShell } from '@/components/layout/LayoutShell';
 import { GlobalStyles } from '@/components/style/GlobalStyle';
 import StyledComponentsRegistry from '@/lib/registry';
 import type { Metadata } from 'next';
@@ -42,9 +40,7 @@ const RootLayout = ({
       <body>
         <StyledComponentsRegistry>
           <GlobalStyles />
-          <Header />
-          <Main>{children}</Main>
-          <Footer />
+          <LayoutShell>{children}</LayoutShell>
         </StyledComponentsRegistry>
       </body>
     </html>
