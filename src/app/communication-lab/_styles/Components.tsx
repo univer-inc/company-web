@@ -5,6 +5,8 @@ export const Wrap = styled.div`
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 32px;
+  position: relative;
+  z-index: 1;
 `;
 
 // --- Header ---
@@ -32,6 +34,10 @@ export const Brand = styled.div`
   font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.03em;
+
+  @media (max-width: 760px) {
+    font-size: 13px;
+  }
 `;
 
 export const BrandMark = styled.span`
@@ -530,4 +536,430 @@ export const FootGrid = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
+`;
+
+// --- Nav CTA Button ---
+export const NavCta = styled.a`
+  background: var(--yellow);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 700;
+`;
+
+// --- Breadcrumb ---
+export const Breadcrumb = styled.div`
+  font-size: 12.5px;
+  color: var(--slate);
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+
+  a:hover {
+    color: var(--green-dark);
+  }
+`;
+
+// --- Hero (U-22 variant) ---
+export const HeroRipple = styled.div`
+  background: var(--green);
+  padding: 90px 0 70px;
+  position: relative;
+`;
+
+export const RippleSvg = styled.svg`
+  position: absolute;
+  right: -120px;
+  top: -80px;
+  width: 520px;
+  height: 520px;
+  opacity: 0.5;
+  z-index: 0;
+`;
+
+export const HeroEyebrowU22 = styled.div`
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  background: #fff;
+  display: inline-block;
+  padding: 6px 16px;
+  margin-bottom: 22px;
+`;
+
+export const HeroTitleU22 = styled.h1`
+  font-size: 42px;
+  line-height: 1.4;
+  margin: 0 0 22px;
+  color: var(--ink);
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 900;
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
+`;
+
+export const HeroLeadU22 = styled.p`
+  font-size: 15.5px;
+  line-height: 2;
+  color: #2b2320;
+  max-width: 520px;
+  margin: 0 0 32px;
+`;
+
+export const TagRow = styled.div`
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 18px;
+`;
+
+export const Tag = styled.span`
+  background: rgba(0, 0, 0, 0.08);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+`;
+
+export const BtnPrimaryYellow = styled.a`
+  background: var(--yellow);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 16px 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+// --- Programs (numbered blocks) ---
+export const ProgSection = styled.section`
+  padding: 20px 0 90px;
+  background: var(--gray);
+`;
+
+export const ProgBlock = styled.div`
+  margin-bottom: 20px;
+`;
+
+export const ProgHead = styled.div<{ color: string }>`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 28px;
+  font-weight: 900;
+  font-size: 19px;
+  color: #fff;
+  background: ${({ color }) => color};
+`;
+
+export const ProgNum = styled.span`
+  font-size: 26px;
+  font-family: 'M PLUS 1p', sans-serif;
+
+  .slash {
+    font-weight: 400;
+  }
+`;
+
+export const ProgBody = styled.div`
+  background: #fff;
+  padding: 28px 28px 30px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+`;
+
+export const ProgTheme = styled.p`
+  font-size: 14.5px;
+  color: var(--slate);
+  margin: 0 0 14px;
+  font-weight: 700;
+`;
+
+export const ProgDesc = styled.p`
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: #2b2320;
+  margin: 0 0 16px;
+`;
+
+export const ProgList = styled.ul`
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #2b2320;
+
+  li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+
+    &::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+    }
+  }
+`;
+
+export const ProgPriceRow = styled.div`
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  border-top: 1px dashed #ddd;
+  padding-top: 16px;
+`;
+
+export const ProgPrice = styled.span`
+  font-size: 26px;
+  font-weight: 900;
+  font-family: 'M PLUS 1p', sans-serif;
+`;
+
+export const UpsellNote = styled.div`
+  margin-top: 12px;
+  background: #fff0f6;
+  border-left: 3px solid var(--yellow);
+  padding: 10px 16px;
+  font-size: 12.5px;
+  color: #7a1046;
+`;
+
+// --- Courses ---
+export const CoursesSection = styled.section`
+  padding: 20px 0 90px;
+`;
+
+export const CoursesIntro = styled.p`
+  font-size: 14.5px;
+  line-height: 2;
+  color: #2b2320;
+  max-width: 720px;
+  margin: 0 0 40px;
+`;
+
+export const CourseCard = styled.div<{ popular?: boolean }>`
+  border: 2px solid var(--ink);
+  margin-bottom: 24px;
+  overflow: hidden;
+  ${({ popular }) =>
+    popular && `border-color: var(--green-dark); box-shadow: 6px 6px 0 var(--green-light);`}
+`;
+
+export const CourseHead = styled.div<{ popular?: boolean }>`
+  padding: 20px 26px;
+  background: ${({ popular }) => (popular ? 'var(--green)' : 'var(--gray)')};
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+`;
+
+export const CourseBadge = styled.span<{ popular?: boolean }>`
+  font-size: 12px;
+  font-weight: 900;
+  background: ${({ popular }) => (popular ? 'var(--green-dark)' : 'var(--ink)')};
+  color: #fff;
+  padding: 4px 12px;
+`;
+
+export const CourseCardTitle = styled.h3`
+  font-size: 18px;
+  margin: 0;
+`;
+
+export const CourseBody = styled.div`
+  padding: 24px 26px;
+`;
+
+export const CourseFor = styled.p`
+  font-size: 13.5px;
+  color: var(--slate);
+  margin: 0 0 14px;
+`;
+
+export const CourseFlow = styled.p`
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 6px;
+`;
+
+export const CourseTime = styled.p`
+  font-size: 12.5px;
+  color: var(--slate);
+  margin: 0 0 18px;
+`;
+
+export const CoursePriceList = styled.ul`
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  font-size: 13.5px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-top: 1px dashed #ddd;
+  }
+`;
+
+export const CourseTag = styled.span`
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 12px;
+`;
+
+export const CourseTotalRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 2px solid var(--ink);
+  padding-top: 14px;
+`;
+
+export const CourseSave = styled.span`
+  font-size: 12.5px;
+  color: var(--yellow-deep-2);
+  font-weight: 700;
+`;
+
+export const CourseTotal = styled.span`
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+`;
+
+export const CourseTip = styled.div`
+  background: #fff7e8;
+  border-left: 4px solid var(--yellow);
+  padding: 16px 20px;
+  font-size: 13.5px;
+  line-height: 1.9;
+  margin: 10px 0 40px;
+`;
+
+export const CourseTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+
+  th {
+    background: var(--ink);
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  tr:nth-child(even) td {
+    background: var(--gray);
+  }
+`;
+
+// --- Keywords ---
+export const KwSection = styled.section`
+  padding: 70px 0;
+`;
+
+export const KwWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+`;
+
+export const KwChip = styled.span`
+  border: 2px solid var(--ink);
+  padding: 10px 20px;
+  font-size: 13.5px;
+  font-weight: 700;
+
+  &:nth-child(3n + 1) {
+    background: var(--green);
+  }
+
+  &:nth-child(3n + 2) {
+    background: var(--yellow);
+    color: #fff;
+    border-color: var(--yellow);
+  }
+
+  &:nth-child(3n) {
+    background: #fff;
+  }
+`;
+
+// --- FAQ ---
+export const FaqSection = styled.section`
+  padding: 20px 0 90px;
+`;
+
+export const FaqItem = styled.div<{ open?: boolean }>`
+  border-top: 1px solid #e5e5e5;
+  padding: 22px 0;
+
+  &:last-child {
+    border-bottom: 1px solid #e5e5e5;
+  }
+`;
+
+export const FaqQ = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+`;
+
+export const FaqMark = styled.span`
+  color: var(--yellow);
+  font-family: 'M PLUS 1p', sans-serif;
+`;
+
+export const FaqA = styled.div<{ open?: boolean }>`
+  max-height: ${({ open }) => (open ? '220px' : '0')};
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+  p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--slate);
+    margin: 14px 0 0;
+  }
+`;
+
+// --- Final CTA ---
+export const FinalCta = styled.section`
+  padding: 90px 0 100px;
+  background: var(--ink);
+  color: #fff;
+  text-align: center;
+
+  .btn-primary {
+    background: var(--yellow);
+  }
+`;
+
+export const FinalCtaTitle = styled.h2`
+  font-size: 28px;
+  margin: 0 0 14px;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 900;
+`;
+
+export const FinalCtaDesc = styled.p`
+  color: #ddd;
+  font-size: 14.5px;
+  margin: 0 0 30px;
 `;

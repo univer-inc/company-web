@@ -2,11 +2,6 @@
 
 import NextImage from 'next/image';
 import {
-  HeaderEl,
-  Nav,
-  Brand,
-  BrandMark,
-  NavLinks,
   Wrap,
   Hero,
   HeroBadge,
@@ -60,28 +55,22 @@ import {
   ContactDesc,
   ContactRow,
   ContactBtn,
-  FooterEl,
-  FootGrid,
 } from './_styles';
+import { CommLabHeader } from './_components/CommLabHeader';
+import { CommLabFooter } from './_components/CommLabFooter';
 import TopMainVisual from './_assets/top-main-visual.svg';
 import profileImg from './_assets/profile.jpg';
 
 const CommunicationLab = () => {
   return (
     <>
-      <HeaderEl>
-        <Nav>
-          <Brand>
-            <BrandMark />
-            コミュニケーション・ラボ
-          </Brand>
-          <NavLinks>
-            <a href="#about">コミュニケーション・ラボについて</a>
-            <a href="#programs">プログラム</a>
-            <a href="#profile">プロフィール</a>
-          </NavLinks>
-        </Nav>
-      </HeaderEl>
+      <CommLabHeader
+        navLinks={[
+          { href: '#about', label: 'コミュニケーション・ラボについて' },
+          { href: '#programs', label: 'プログラム' },
+          { href: '#profile', label: 'プロフィール' },
+        ]}
+      />
 
       <Hero>
         <HeroBadge />
@@ -360,14 +349,7 @@ const CommunicationLab = () => {
         </Wrap>
       </Contact>
 
-      <FooterEl>
-        <Wrap>
-          <FootGrid>
-            <div>株式会社ウニベル コミュニケーション・ラボ</div>
-            <div>お問い合わせ</div>
-          </FootGrid>
-        </Wrap>
-      </FooterEl>
+      <CommLabFooter />
     </>
   );
 };
