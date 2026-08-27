@@ -56,6 +56,7 @@ import {
   ContactRow,
   ContactBtn,
 } from './_styles';
+import Link from 'next/link';
 import { CommLabHeader } from './_components/CommLabHeader';
 import { CommLabFooter } from './_components/CommLabFooter';
 import TopMainVisual from './_assets/top-main-visual.svg';
@@ -255,7 +256,9 @@ const CommunicationLab = () => {
                 <li>3DAYS PROGRAM</li>
                 <li>START DASH PROGRAM</li>
               </GwSub>
-              <GwCta>U-22のプログラムを見る →</GwCta>
+              <Link href="/communication-lab/u-22" style={{ textDecoration: 'none' }}>
+                <GwCta>U-22のプログラムを見る →</GwCta>
+              </Link>
             </GwCard>
             <GwCard variant="biz" comingSoon>
               <GwOverlay>
@@ -336,13 +339,13 @@ const CommunicationLab = () => {
             学生向けのU-22と、ビジネスパーソン向けのプログラムをご用意しています。
           </ContactDesc>
           <ContactRow>
-            <ContactBtn variant="u22" href="#">
+            <ContactBtn variant="u22" href="/communication-lab/u-22">
               U-22のプログラムを見る
             </ContactBtn>
             <ContactBtn variant="biz" disabled>
               Businessプログラム（準備中）
             </ContactBtn>
-            <ContactBtn variant="plain" href="#">
+            <ContactBtn variant="plain" href="https://forms.gle/q5X4HJAvN6ZwK3FU7" target="_blank" rel="noopener noreferrer">
               お問い合わせ
             </ContactBtn>
           </ContactRow>
