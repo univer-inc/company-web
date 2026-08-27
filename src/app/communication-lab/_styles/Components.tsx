@@ -7,6 +7,11 @@ export const Wrap = styled.div`
   padding: 0 32px;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 760px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;
 
 // --- Header ---
@@ -43,7 +48,10 @@ export const Brand = styled.div`
   }
 
   @media (max-width: 760px) {
-    font-size: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 11px;
 
     a {
       width: 120px;
@@ -568,6 +576,10 @@ export const HeroRipple = styled.div`
   background: var(--green);
   padding: 90px 0 70px;
   position: relative;
+
+  @media (max-width: 760px) {
+    padding: 60px 0 50px;
+  }
 `;
 
 export const RippleSvg = styled.svg`
