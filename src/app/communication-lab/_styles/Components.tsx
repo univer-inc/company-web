@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from './breakpoints';
 
 // --- Layout ---
 export const Wrap = styled.div`
@@ -8,7 +9,7 @@ export const Wrap = styled.div`
   position: relative;
   z-index: 1;
 
-  @media (max-width: 760px) {
+  ${media.lg} {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -47,7 +48,7 @@ export const Brand = styled.div`
     flex-shrink: 0;
   }
 
-  @media (max-width: 760px) {
+  ${media.lg} {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
@@ -65,7 +66,7 @@ export const NavLinks = styled.nav`
   font-size: 13px;
   color: var(--slate);
 
-  @media (max-width: 760px) {
+  ${media.lg} {
     display: none;
   }
 
@@ -125,7 +126,7 @@ export const HeroInner = styled.div`
   justify-content: space-between;
   gap: 40px;
 
-  @media (max-width: 760px) {
+  ${media.lg} {
     flex-direction: column;
     text-align: center;
   }
@@ -143,7 +144,7 @@ export const HeroVisual = styled.div`
   width: 350px;
   max-width: 100%;
 
-  @media (max-width: 760px) {
+  ${media.lg} {
     order: -1;
   }
 
@@ -168,7 +169,7 @@ export const HeroTitle = styled.h1`
   font-family: 'M PLUS 1p', sans-serif;
   font-weight: 900;
 
-  @media (max-width: 600px) {
+  ${media.md} {
     font-size: 26px;
   }
 `;
@@ -247,11 +248,11 @@ export const StepGrid = styled.div`
   grid-template-columns: repeat(5, 1fr);
   gap: 14px;
 
-  @media (max-width: 900px) {
+  ${media.xl} {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 520px) {
+  ${media.sm} {
     grid-template-columns: 1fr;
   }
 `;
@@ -301,7 +302,7 @@ export const GwGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 
-  @media (max-width: 760px) {
+  ${media.lg} {
     grid-template-columns: 1fr;
   }
 `;
@@ -409,7 +410,7 @@ export const PfGrid = styled.div`
   gap: 40px;
   align-items: start;
 
-  @media (max-width: 640px) {
+  ${media.lg} {
     grid-template-columns: 1fr;
   }
 `;
@@ -577,7 +578,7 @@ export const HeroRipple = styled.div`
   padding: 90px 0 70px;
   position: relative;
 
-  @media (max-width: 760px) {
+  ${media.lg} {
     padding: 60px 0 50px;
   }
 `;
@@ -610,7 +611,7 @@ export const HeroTitleU22 = styled.h1`
   font-family: 'M PLUS 1p', sans-serif;
   font-weight: 900;
 
-  @media (max-width: 600px) {
+  ${media.md} {
     font-size: 30px;
   }
 `;
@@ -882,7 +883,7 @@ export const CourseTable = styled.table`
     background: var(--gray);
   }
 
-  @media (max-width: 760px) {
+  ${media.lg} {
     thead {
       display: none;
     }
