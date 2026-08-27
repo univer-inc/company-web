@@ -255,7 +255,7 @@ export const GwGrid = styled.div`
   }
 `;
 
-export const GwCard = styled.a<{ variant: 'u22' | 'biz' }>`
+export const GwCard = styled.div<{ variant: 'u22' | 'biz'; comingSoon?: boolean }>`
   border-radius: 16px;
   padding: 40px 34px;
   color: #fff;
@@ -268,6 +268,9 @@ export const GwCard = styled.a<{ variant: 'u22' | 'biz' }>`
     variant === 'u22'
       ? 'linear-gradient(150deg, var(--mint), var(--mint-deep))'
       : 'linear-gradient(150deg, var(--aqua), var(--aqua-deep))'};
+  ${({ comingSoon }) =>
+    comingSoon &&
+    `pointer-events: none; opacity: 0.65;`}
 `;
 
 export const GwTag = styled.span`
@@ -280,6 +283,24 @@ export const GwTag = styled.span`
   border-radius: 20px;
   margin-bottom: 16px;
   align-self: flex-start;
+`;
+
+export const GwOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+`;
+
+export const GwOverlayText = styled.span`
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  color: #fff;
 `;
 
 export const GwDesc = styled.p`
@@ -444,12 +465,17 @@ export const ContactRow = styled.div`
   flex-wrap: wrap;
 `;
 
-export const ContactBtn = styled.a<{ variant: 'u22' | 'biz' | 'plain' }>`
+export const ContactBtn = styled.a<{
+  variant: 'u22' | 'biz' | 'plain';
+  disabled?: boolean;
+}>`
   font-weight: 700;
   font-size: 14px;
   padding: 15px 26px;
   border-radius: 30px;
-  ${({ variant }) => {
+  ${({ variant, disabled }) => {
+    if (disabled)
+      return `background: #888; color: #ccc; pointer-events: none;`;
     if (variant === 'u22') return `background: var(--mint-deep); color: #fff;`;
     if (variant === 'biz') return `background: var(--aqua-deep); color: #fff;`;
     return `border: 2px solid #fff; color: #fff;`;

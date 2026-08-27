@@ -39,6 +39,8 @@ import {
   GwSub,
   GwCta,
   GwCircle,
+  GwOverlay,
+  GwOverlayText,
   Profile,
   PfGrid,
   PfPhoto,
@@ -238,7 +240,7 @@ const CommunicationLab = () => {
             <SecTitleJa>目的に合わせたプログラム</SecTitleJa>
           </SecTitle>
           <GwGrid>
-            <GwCard variant="u22" href="#">
+            <GwCard variant="u22">
               <GwCircle />
               <GwTag>U-22</GwTag>
               <GwDesc>
@@ -254,7 +256,10 @@ const CommunicationLab = () => {
               </GwSub>
               <GwCta>U-22のプログラムを見る →</GwCta>
             </GwCard>
-            <GwCard variant="biz" href="#">
+            <GwCard variant="biz" comingSoon>
+              <GwOverlay>
+                <GwOverlayText>COMING SOON</GwOverlayText>
+              </GwOverlay>
               <GwCircle />
               <GwTag>for Business</GwTag>
               <GwDesc>
@@ -326,8 +331,8 @@ const CommunicationLab = () => {
             <ContactBtn variant="u22" href="#">
               U-22のプログラムを見る
             </ContactBtn>
-            <ContactBtn variant="biz" href="#">
-              Businessプログラムを見る
+            <ContactBtn variant="biz" disabled>
+              Businessプログラム（準備中）
             </ContactBtn>
             <ContactBtn variant="plain" href="#">
               お問い合わせ
