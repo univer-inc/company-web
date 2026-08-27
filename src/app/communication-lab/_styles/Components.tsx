@@ -86,8 +86,8 @@ export const SecTitle = styled.div`
 
 export const SecTitleEn = styled.span`
   font-size: 30px;
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
 `;
 
 export const SecTitleDivider = styled.span`
@@ -155,8 +155,8 @@ export const HeroVisual = styled.div`
 `;
 
 export const HeroEyebrow = styled.div`
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.08em;
   margin-bottom: 20px;
@@ -166,8 +166,8 @@ export const HeroTitle = styled.h1`
   font-size: 36px;
   line-height: 1.55;
   margin: 0 0 22px;
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
 
   ${media.md} {
     font-size: 26px;
@@ -210,7 +210,9 @@ export const BtnGhost = styled.a`
 `;
 
 // --- Text Section ---
-export const TextSec = styled.section<{ alt?: boolean }>`
+export const TextSec = styled.section.withConfig({
+  shouldForwardProp: (prop) => prop !== 'alt',
+})<{ alt?: boolean }>`
   padding: 80px 0;
   ${({ alt }) => alt && `background: var(--gray);`}
 `;
@@ -263,8 +265,8 @@ export const StepCard = styled.div`
 `;
 
 export const StepNum = styled.div`
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
   font-size: 20px;
   color: var(--yellow-deep);
   margin-bottom: 6px;
@@ -307,7 +309,9 @@ export const GwGrid = styled.div`
   }
 `;
 
-export const GwCard = styled.div<{
+export const GwCard = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['variant', 'comingSoon'].includes(prop),
+})<{
   variant: 'u22' | 'biz';
   comingSoon?: boolean;
 }>`
@@ -327,9 +331,9 @@ export const GwCard = styled.div<{
 `;
 
 export const GwTag = styled.span`
-  font-family: 'M PLUS 1p', sans-serif;
+
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 700;
   background: rgba(255, 255, 255, 0.25);
   display: inline-block;
   padding: 5px 14px;
@@ -349,8 +353,8 @@ export const GwOverlay = styled.div`
 `;
 
 export const GwOverlayText = styled.span`
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.15em;
   color: #fff;
@@ -434,9 +438,9 @@ export const PfPhoto = styled.div`
 `;
 
 export const PfRole = styled.div`
-  font-family: 'M PLUS 1p', sans-serif;
+
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--slate);
   letter-spacing: 0.05em;
   margin-bottom: 8px;
@@ -445,8 +449,8 @@ export const PfRole = styled.div`
 export const PfName = styled.div`
   font-size: 24px;
   margin: 0 0 4px;
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
 `;
 
 export const PfSub = styled.div`
@@ -478,8 +482,8 @@ export const PfStat = styled.div`
 `;
 
 export const PfStatNum = styled.div`
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
   font-size: 19px;
   color: var(--yellow-deep);
 `;
@@ -502,8 +506,8 @@ export const Contact = styled.section`
 export const ContactTitle = styled.h2`
   font-size: 26px;
   margin: 0 0 36px;
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
 `;
 
 export const ContactDesc = styled.p`
@@ -608,8 +612,8 @@ export const HeroTitleU22 = styled.h1`
   line-height: 1.4;
   margin: 0 0 22px;
   color: var(--ink);
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
 
   ${media.md} {
     font-size: 30px;
@@ -665,7 +669,7 @@ export const ProgHead = styled.div<{ color: string }>`
   align-items: center;
   gap: 20px;
   padding: 20px 28px;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 19px;
   color: #fff;
   background: ${({ color }) => color};
@@ -673,7 +677,7 @@ export const ProgHead = styled.div<{ color: string }>`
 
 export const ProgNum = styled.span`
   font-size: 26px;
-  font-family: 'M PLUS 1p', sans-serif;
+
 
   .slash {
     font-weight: 400;
@@ -732,8 +736,8 @@ export const ProgPriceRow = styled.div`
 
 export const ProgPrice = styled.span`
   font-size: 26px;
-  font-weight: 900;
-  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 700;
+
 `;
 
 export const UpsellNote = styled.div`
@@ -758,7 +762,9 @@ export const CoursesIntro = styled.p`
   margin: 0 0 40px;
 `;
 
-export const CourseCard = styled.div<{ popular?: boolean }>`
+export const CourseCard = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'popular',
+})<{ popular?: boolean }>`
   border: 2px solid var(--ink);
   margin-bottom: 24px;
   overflow: hidden;
@@ -767,7 +773,9 @@ export const CourseCard = styled.div<{ popular?: boolean }>`
     `border-color: var(--green-dark); box-shadow: 6px 6px 0 var(--green-light);`}
 `;
 
-export const CourseHead = styled.div<{ popular?: boolean }>`
+export const CourseHead = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'popular',
+})<{ popular?: boolean }>`
   padding: 20px 26px;
   background: ${({ popular }) => (popular ? 'var(--green)' : 'var(--gray)')};
   display: flex;
@@ -776,9 +784,11 @@ export const CourseHead = styled.div<{ popular?: boolean }>`
   flex-wrap: wrap;
 `;
 
-export const CourseBadge = styled.span<{ popular?: boolean }>`
+export const CourseBadge = styled.span.withConfig({
+  shouldForwardProp: (prop) => prop !== 'popular',
+})<{ popular?: boolean }>`
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
   background: ${({ popular }) =>
     popular ? 'var(--green-dark)' : 'var(--ink)'};
   color: #fff;
@@ -847,8 +857,8 @@ export const CourseSave = styled.span`
 `;
 
 export const CourseTotal = styled.span`
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
   font-size: 26px;
 `;
 
@@ -968,7 +978,7 @@ export const FaqQ = styled.div`
 
 export const FaqMark = styled.span`
   color: var(--yellow);
-  font-family: 'M PLUS 1p', sans-serif;
+
 `;
 
 export const FaqA = styled.div<{ open?: boolean }>`
@@ -999,8 +1009,8 @@ export const FinalCta = styled.section`
 export const FinalCtaTitle = styled.h2`
   font-size: 28px;
   margin: 0 0 14px;
-  font-family: 'M PLUS 1p', sans-serif;
-  font-weight: 900;
+
+  font-weight: 700;
 `;
 
 export const FinalCtaDesc = styled.p`

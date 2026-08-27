@@ -2,7 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Wrap, SecTitle, SecTitleEn, SecTitleDivider, SecTitleJa } from '../_styles';
+import {
+  Wrap,
+  SecTitle,
+  SecTitleEn,
+  SecTitleDivider,
+  SecTitleJa,
+} from '../_styles';
 import { CommLabHeader } from '../_components/CommLabHeader';
 import { CommLabFooter } from '../_components/CommLabFooter';
 import {
@@ -99,18 +105,54 @@ const U22 = () => {
 
       <Wrap>
         <Breadcrumb>
-          <Link href="/communication-lab">コミュニケーション・ラボ</Link> ＞ U-22
+          <Link href="/communication-lab">コミュニケーション・ラボ</Link> ＞
+          U-22
         </Breadcrumb>
       </Wrap>
 
       <section>
         <HeroRipple>
           <RippleSvg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="200" cy="200" r="180" fill="none" stroke="#fff" strokeWidth="2" />
-            <circle cx="200" cy="200" r="150" fill="none" stroke="#fff" strokeWidth="2" />
-            <circle cx="200" cy="200" r="120" fill="none" stroke="#fff" strokeWidth="2" />
-            <circle cx="200" cy="200" r="90" fill="none" stroke="#fff" strokeWidth="2" />
-            <circle cx="200" cy="200" r="60" fill="none" stroke="#fff" strokeWidth="2" />
+            <circle
+              cx="200"
+              cy="200"
+              r="180"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="2"
+            />
+            <circle
+              cx="200"
+              cy="200"
+              r="150"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="2"
+            />
+            <circle
+              cx="200"
+              cy="200"
+              r="120"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="2"
+            />
+            <circle
+              cx="200"
+              cy="200"
+              r="90"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="2"
+            />
+            <circle
+              cx="200"
+              cy="200"
+              r="60"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="2"
+            />
           </RippleSvg>
           <Wrap>
             <HeroEyebrowU22>27・28卒 / U-22 PROGRAM</HeroEyebrowU22>
@@ -130,7 +172,8 @@ const U22 = () => {
               <br />
               <br />
               U-22は、そんな「話せない」を少人数の実践でひとつずつ解消していくプログラムです。答えを暗記するのではなく、自分の経験や考えを言葉にする。
-              <strong>考える→話す→振り返る。</strong>このサイクルを繰り返しながら、本番でも自分の言葉で話せる力を身につけます。
+              <strong>考える→話す→振り返る。</strong>
+              このサイクルを繰り返しながら、本番でも自分の言葉で話せる力を身につけます。
             </HeroLeadU22>
             <CtaRow>
               <BtnPrimary href="#programs">1DAY PROGRAMから始める →</BtnPrimary>
@@ -193,7 +236,9 @@ const U22 = () => {
                 <strong>90分×3回／オンライン／定員4名／各回途中休憩あり</strong>
               </ProgDesc>
               <ProgDesc>
-                経験や考えを掘り下げ、それを言葉にして人に伝えてみます。Zoomのブレイクアウトルームや動画撮影も使いながら、<strong>「考える→話す→振り返る」</strong>を繰り返します。講義を聞くよりも、実際に話すことを重視した3日間です。
+                経験や考えを掘り下げ、それを言葉にして人に伝えてみます。Zoomのブレイクアウトルームや動画撮影も使いながら、
+                <strong>「考える→話す→振り返る」</strong>
+                を繰り返します。講義を聞くよりも、実際に話すことを重視した3日間です。
               </ProgDesc>
               <ProgList>
                 <li>
@@ -205,12 +250,16 @@ const U22 = () => {
                   話したい内容を整理し、自己PRとして組み立てます。声・滑舌・表情・視線に加えて、自己PR動画の撮影方法(構図・光・見え方など)も実践します。
                 </li>
                 <li>
-                  <strong>DAY3｜REFLECT / CONNECT — 対話の中で使ってみる。</strong>
+                  <strong>
+                    DAY3｜REFLECT / CONNECT — 対話の中で使ってみる。
+                  </strong>
                   あらかじめ準備した答えだけでなく、想定外の質問にも答えます。その場で考え、自分の言葉で返す練習です。
                 </li>
               </ProgList>
               <ProgTheme>TAKE AWAY</ProgTheme>
-              <ProgDesc>自己紹介／1分自己PR／撮影動画／個人フィードバック／本番前チェックリスト</ProgDesc>
+              <ProgDesc>
+                自己紹介／1分自己PR／撮影動画／個人フィードバック／本番前チェックリスト
+              </ProgDesc>
               <ProgPriceRow>
                 <ProgPrice>¥42,000</ProgPrice>
                 <small>(税込)</small>
@@ -235,14 +284,18 @@ const U22 = () => {
               </ProgDesc>
               <ProgList>
                 <li>
-                  <strong>SESSION1</strong> — 自己紹介・自己PRを確認し、想定質問への回答や動画撮影を実践します。終了後、次回までに取り組む課題を決めます。
+                  <strong>SESSION1</strong> —
+                  自己紹介・自己PRを確認し、想定質問への回答や動画撮影を実践します。終了後、次回までに取り組む課題を決めます。
                 </li>
                 <li>
-                  <strong>SESSION2</strong> — 本番を想定した質問と回答を繰り返します。最後に撮影を行い、最終フィードバックをお伝えします。
+                  <strong>SESSION2</strong> —
+                  本番を想定した質問と回答を繰り返します。最後に撮影を行い、最終フィードバックをお伝えします。
                 </li>
               </ProgList>
               <ProgTheme>TAKE AWAY</ProgTheme>
-              <ProgDesc>本番用自己PR／最終動画／想定質問メモ／本番前チェックリスト</ProgDesc>
+              <ProgDesc>
+                本番用自己PR／最終動画／想定質問メモ／本番前チェックリスト
+              </ProgDesc>
               <ProgPriceRow>
                 <ProgPrice>¥27,000</ProgPrice>
                 <small>(税込)</small>
@@ -257,7 +310,9 @@ const U22 = () => {
           <SecTitle>
             <SecTitleEn>COURSES</SecTitleEn>
             <SecTitleDivider />
-            <SecTitleJa>あなたの状況に合わせて選べる！おすすめ受講コース</SecTitleJa>
+            <SecTitleJa>
+              あなたの状況に合わせて選べる！おすすめ受講コース
+            </SecTitleJa>
           </SecTitle>
           <CoursesIntro>
             「どれから受ければいいの?」と迷う方のために、目的別の3つのモデルコースをご用意しました。すべてのプログラムは「1コマ90分」で構成されているため、あなたのペースに合わせて無理なくステップアップできます。
@@ -306,7 +361,9 @@ const U22 = () => {
           <CourseCard>
             <CourseHead>
               <CourseBadge>🚀 お急ぎの方へ</CourseBadge>
-              <CourseCardTitle>最短で結果を出す「最速特化コース」</CourseCardTitle>
+              <CourseCardTitle>
+                最短で結果を出す「最速特化コース」
+              </CourseCardTitle>
             </CourseHead>
             <CourseBody>
               <CourseFor>
@@ -364,7 +421,8 @@ const U22 = () => {
           </CourseCard>
 
           <CourseTip>
-            💡 まずは基本マスターコース(¥44,000)からでも安心です!受講後、さらに実践的なサポートが必要になった場合は、後から「START
+            💡
+            まずは基本マスターコース(¥44,000)からでも安心です!受講後、さらに実践的なサポートが必要になった場合は、後から「START
             DASH(継続割:¥21,000)」を追加でお申し込みいただくことも可能です。ご自身の進捗に合わせてご活用ください。
           </CourseTip>
 
@@ -448,7 +506,7 @@ const U22 = () => {
         </Wrap>
       </FinalCta>
 
-      <CommLabFooter rightText="U-22 PROGRAM" />
+      <CommLabFooter />
     </>
   );
 };

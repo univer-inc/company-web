@@ -5,6 +5,7 @@ import withTwin from "./withTwin.mjs";
  */
 export default withTwin({
   reactStrictMode: true,
+  optimizeFonts: false,
 
   webpack: (config) => {
     config.module.rules.push({

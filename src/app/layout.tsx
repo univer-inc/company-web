@@ -3,14 +3,6 @@ import { GlobalStyles } from '@/components/style/GlobalStyle';
 import StyledComponentsRegistry from '@/lib/registry';
 import type { Metadata } from 'next';
 
-// TODO: https://nextjs.org/docs/architecture/nextjs-compiler
-// import { Roboto } from 'next/font/google';
-// const robotoFont = Roboto({
-//   weight: '500',
-//   subsets: ['latin'],
-//   variable: '--font-roboto',
-// });
-
 export const metadata: Metadata = {
   title: '株式会社ウニベル / UNIVER inc.',
   description:
@@ -32,11 +24,10 @@ const RootLayout = ({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
           rel="stylesheet"
         />
       </head>
-      {/* <body className={robotoFont.variable}> */}
       <body>
         <StyledComponentsRegistry>
           <GlobalStyles />
