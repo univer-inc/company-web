@@ -380,25 +380,25 @@ const ForStudents = () => {
             </thead>
             <tbody>
               <tr>
-                <td>フルステップ 👑</td>
-                <td>1DAY → 3DAYS → START DASH</td>
-                <td>全6コマ(8h)</td>
-                <td>¥65,000</td>
-                <td>16,000円お得</td>
+                <td data-label="コース名">フルステップ 👑</td>
+                <td data-label="受講の流れ">1DAY → 3DAYS → START DASH</td>
+                <td data-label="総時間">全6コマ(8h)</td>
+                <td data-label="合計価格">¥65,000</td>
+                <td data-label="割引">16,000円お得</td>
               </tr>
               <tr>
-                <td>最速特化 🚀</td>
-                <td>3DAYS → START DASH</td>
-                <td>全5コマ(6.5h)</td>
-                <td>¥63,000</td>
-                <td>6,000円お得</td>
+                <td data-label="コース名">最速特化 🚀</td>
+                <td data-label="受講の流れ">3DAYS → START DASH</td>
+                <td data-label="総時間">全5コマ(6.5h)</td>
+                <td data-label="合計価格">¥63,000</td>
+                <td data-label="割引">6,000円お得</td>
               </tr>
               <tr>
-                <td>基本マスター 🔰</td>
-                <td>1DAY → 3DAYS</td>
-                <td>全4コマ(6h)</td>
-                <td>¥44,000</td>
-                <td>10,000円お得</td>
+                <td data-label="コース名">基本マスター 🔰</td>
+                <td data-label="受講の流れ">1DAY → 3DAYS</td>
+                <td data-label="総時間">全4コマ(6h)</td>
+                <td data-label="合計価格">¥44,000</td>
+                <td data-label="割引">10,000円お得</td>
               </tr>
             </tbody>
           </CourseTable>

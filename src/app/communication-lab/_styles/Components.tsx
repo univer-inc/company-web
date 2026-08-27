@@ -863,6 +863,43 @@ export const CourseTable = styled.table`
   tr:nth-child(even) td {
     background: var(--gray);
   }
+
+  @media (max-width: 760px) {
+    thead {
+      display: none;
+    }
+
+    tbody tr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+    }
+
+    td {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 14px;
+      background: transparent !important;
+
+      &::before {
+        content: attr(data-label);
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--slate);
+        margin-bottom: 4px;
+      }
+
+      &:first-child {
+        grid-column: 1 / -1;
+        font-weight: 700;
+      }
+
+      &:nth-last-child(-n + 2) {
+        border-bottom: none;
+      }
+    }
+  }
 `;
 
 // --- Keywords ---
