@@ -31,20 +31,24 @@ export const Brand = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 0.03em;
+  color: var(--ink);
+
+  a {
+    display: block;
+    width: 180px;
+    flex-shrink: 0;
+  }
 
   @media (max-width: 760px) {
-    font-size: 13px;
-  }
-`;
+    font-size: 12px;
 
-export const BrandMark = styled.span`
-  width: 20px;
-  height: 20px;
-  background: var(--ink);
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    a {
+      width: 120px;
+    }
+  }
 `;
 
 export const NavLinks = styled.nav`

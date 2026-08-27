@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { HeaderEl, Nav, Brand, BrandMark, NavLinks, NavCta } from '../_styles';
+import Logo from '@/components/icon/logo.svg';
+import { HeaderEl, Nav, Brand, NavLinks, NavCta } from '../_styles';
 
 type NavLink = { href: string; label: string };
 
@@ -18,8 +19,10 @@ export const CommLabHeader = ({
     <HeaderEl>
       <Nav>
         <Brand>
-          <BrandMark />
-          <Link href="/communication-lab">UNIVER コミュニケーション・ラボ</Link>
+          <Link href="/communication-lab">
+            <Logo />
+          </Link>
+          <span>コミュニケーション・ラボ</span>
         </Brand>
         <NavLinks>
           {navLinks.map(({ href, label }) => (
