@@ -400,6 +400,7 @@ export const PfPhoto = styled.div`
   aspect-ratio: 1/1;
   background: var(--gray);
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: '';

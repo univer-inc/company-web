@@ -1,5 +1,6 @@
 'use client';
 
+import NextImage from 'next/image';
 import {
   HeaderEl,
   Nav,
@@ -62,7 +63,8 @@ import {
   FooterEl,
   FootGrid,
 } from './_styles';
-import TopMainVisual from '@/components/icon/top-main-visual.svg';
+import TopMainVisual from './_assets/top-main-visual.svg';
+import profileImg from './_assets/profile.jpg';
 
 const CommunicationLab = () => {
   return (
@@ -295,7 +297,14 @@ const CommunicationLab = () => {
             <SecTitleJa>CHIEF COMMUNICATION DIRECTOR</SecTitleJa>
           </SecTitle>
           <PfGrid>
-            <PfPhoto />
+            <PfPhoto>
+              <NextImage
+                src={profileImg}
+                alt="宮崎文子"
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </PfPhoto>
             <div>
               <PfRole>CHIEF COMMUNICATION DIRECTOR</PfRole>
               <PfName>宮崎文子</PfName>
