@@ -10,13 +10,16 @@ type CommLabHeaderProps = {
   ctaButton?: { href: string; label: string };
 };
 
-export const CommLabHeader = ({ navLinks = [], ctaButton }: CommLabHeaderProps) => {
+export const CommLabHeader = ({
+  navLinks = [],
+  ctaButton,
+}: CommLabHeaderProps) => {
   return (
     <HeaderEl>
       <Nav>
         <Brand>
           <BrandMark />
-          <Link href="/communication-lab">コミュニケーション・ラボ</Link>
+          <Link href="/communication-lab">UNIVER コミュニケーション・ラボ</Link>
         </Brand>
         <NavLinks>
           {navLinks.map(({ href, label }) => (
@@ -25,9 +28,7 @@ export const CommLabHeader = ({ navLinks = [], ctaButton }: CommLabHeaderProps) 
             </a>
           ))}
         </NavLinks>
-        {ctaButton && (
-          <NavCta href={ctaButton.href}>{ctaButton.label}</NavCta>
-        )}
+        {ctaButton && <NavCta href={ctaButton.href}>{ctaButton.label}</NavCta>}
       </Nav>
     </HeaderEl>
   );

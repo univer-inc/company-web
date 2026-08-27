@@ -31,7 +31,7 @@ export const Brand = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 900;
   letter-spacing: 0.03em;
 
@@ -294,7 +294,10 @@ export const GwGrid = styled.div`
   }
 `;
 
-export const GwCard = styled.div<{ variant: 'u22' | 'biz'; comingSoon?: boolean }>`
+export const GwCard = styled.div<{
+  variant: 'u22' | 'biz';
+  comingSoon?: boolean;
+}>`
   border-radius: 16px;
   padding: 40px 34px;
   color: #fff;
@@ -307,9 +310,7 @@ export const GwCard = styled.div<{ variant: 'u22' | 'biz'; comingSoon?: boolean 
     variant === 'u22'
       ? 'linear-gradient(150deg, var(--mint), var(--mint-deep))'
       : 'linear-gradient(150deg, var(--aqua), var(--aqua-deep))'};
-  ${({ comingSoon }) =>
-    comingSoon &&
-    `pointer-events: none; opacity: 0.65;`}
+  ${({ comingSoon }) => comingSoon && `pointer-events: none; opacity: 0.65;`}
 `;
 
 export const GwTag = styled.span`
@@ -514,8 +515,7 @@ export const ContactBtn = styled.a<{
   padding: 15px 26px;
   border-radius: 30px;
   ${({ variant, disabled }) => {
-    if (disabled)
-      return `background: #888; color: #ccc; pointer-events: none;`;
+    if (disabled) return `background: #888; color: #ccc; pointer-events: none;`;
     if (variant === 'u22') return `background: var(--mint-deep); color: #fff;`;
     if (variant === 'biz') return `background: var(--aqua-deep); color: #fff;`;
     return `border: 2px solid #fff; color: #fff;`;
@@ -746,7 +746,8 @@ export const CourseCard = styled.div<{ popular?: boolean }>`
   margin-bottom: 24px;
   overflow: hidden;
   ${({ popular }) =>
-    popular && `border-color: var(--green-dark); box-shadow: 6px 6px 0 var(--green-light);`}
+    popular &&
+    `border-color: var(--green-dark); box-shadow: 6px 6px 0 var(--green-light);`}
 `;
 
 export const CourseHead = styled.div<{ popular?: boolean }>`
@@ -761,7 +762,8 @@ export const CourseHead = styled.div<{ popular?: boolean }>`
 export const CourseBadge = styled.span<{ popular?: boolean }>`
   font-size: 12px;
   font-weight: 900;
-  background: ${({ popular }) => (popular ? 'var(--green-dark)' : 'var(--ink)')};
+  background: ${({ popular }) =>
+    popular ? 'var(--green-dark)' : 'var(--ink)'};
   color: #fff;
   padding: 4px 12px;
 `;
@@ -915,24 +917,13 @@ export const KwWrap = styled.div`
 `;
 
 export const KwChip = styled.span`
-  border: 2px solid var(--ink);
-  padding: 10px 20px;
-  font-size: 13.5px;
-  font-weight: 700;
-
-  &:nth-child(3n + 1) {
-    background: var(--green);
-  }
-
-  &:nth-child(3n + 2) {
-    background: var(--yellow);
-    color: #fff;
-    border-color: var(--yellow);
-  }
-
-  &:nth-child(3n) {
-    background: #fff;
-  }
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: var(--gray);
+  color: var(--ink);
 `;
 
 // --- FAQ ---
