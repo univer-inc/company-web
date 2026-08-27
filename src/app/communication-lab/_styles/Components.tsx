@@ -47,6 +47,10 @@ export const NavLinks = styled.nav`
   font-size: 13px;
   color: var(--slate);
 
+  @media (max-width: 760px) {
+    display: none;
+  }
+
   a:hover {
     color: var(--ink);
   }
@@ -83,6 +87,7 @@ export const Hero = styled.section`
   background: var(--yellow);
   padding: 80px 0 66px;
   position: relative;
+  overflow: hidden;
 `;
 
 export const HeroBadge = styled.div`
@@ -96,10 +101,38 @@ export const HeroBadge = styled.div`
   opacity: 0.6;
 `;
 
+export const HeroInner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
 export const HeroContent = styled.div`
   position: relative;
   z-index: 2;
   max-width: 640px;
+  flex: 1;
+`;
+
+export const HeroVisual = styled.div`
+  flex-shrink: 0;
+  width: 350px;
+  max-width: 100%;
+
+  @media (max-width: 760px) {
+    order: -1;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const HeroEyebrow = styled.div`

@@ -9,7 +9,9 @@ import {
   Wrap,
   Hero,
   HeroBadge,
+  HeroInner,
   HeroContent,
+  HeroVisual,
   HeroEyebrow,
   HeroTitle,
   HeroLead,
@@ -60,6 +62,7 @@ import {
   FooterEl,
   FootGrid,
 } from './_styles';
+import TopMainVisual from '@/components/icon/top-main-visual.svg';
 
 const CommunicationLab = () => {
   return (
@@ -81,21 +84,28 @@ const CommunicationLab = () => {
       <Hero>
         <HeroBadge />
         <Wrap>
-          <HeroContent>
-            <HeroEyebrow>コミュニケーション・ラボ</HeroEyebrow>
-            <HeroTitle>
-              あなたの中にある、
-              <br />
-              「伝わる言葉」を育てる。
-            </HeroTitle>
-            <HeroLead>
-              コミュニケーション・ラボは、自分の中にある考えや思いを引き出し、整理し、相手に届く言葉へ育てるコミュニケーションプログラムです。
-            </HeroLead>
-            <CtaRow>
-              <BtnGhost href="#about">コミュニケーション・ラボについて</BtnGhost>
-              <BtnPrimary href="#programs">プログラムを見る →</BtnPrimary>
-            </CtaRow>
-          </HeroContent>
+          <HeroInner>
+            <HeroContent>
+              <HeroEyebrow>コミュニケーション・ラボ</HeroEyebrow>
+              <HeroTitle>
+                あなたの中にある、
+                <br />
+                「伝わる言葉」を育てる。
+              </HeroTitle>
+              <HeroLead>
+                コミュニケーション・ラボは、自分の中にある考えや思いを引き出し、整理し、相手に届く言葉へ育てるコミュニケーションプログラムです。
+              </HeroLead>
+              <CtaRow>
+                <BtnGhost href="#about">
+                  コミュニケーション・ラボについて
+                </BtnGhost>
+                <BtnPrimary href="#programs">プログラムを見る →</BtnPrimary>
+              </CtaRow>
+            </HeroContent>
+            <HeroVisual>
+              <TopMainVisual />
+            </HeroVisual>
+          </HeroInner>
         </Wrap>
       </Hero>
 
