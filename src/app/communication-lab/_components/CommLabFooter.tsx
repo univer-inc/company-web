@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { URLS } from '@/data/urls';
 import { FooterEl, FootGrid, Wrap } from '../_styles';
 
 type CommLabFooterProps = {
@@ -10,7 +11,7 @@ type CommLabFooterProps = {
 export const CommLabFooter = ({
   leftText = '株式会社ウニベル',
   rightText = 'お問い合わせ',
-  contactUrl = 'https://forms.gle/q5X4HJAvN6ZwK3FU7',
+  contactUrl = URLS.contactForm,
 }: CommLabFooterProps) => {
   return (
     <FooterEl>

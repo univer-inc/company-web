@@ -155,7 +155,6 @@ export const HeroVisual = styled.div`
 `;
 
 export const HeroEyebrow = styled.div`
-
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.08em;
@@ -265,7 +264,6 @@ export const StepCard = styled.div`
 `;
 
 export const StepNum = styled.div`
-
   font-weight: 700;
   font-size: 20px;
   color: var(--yellow-deep);
@@ -331,7 +329,6 @@ export const GwCard = styled.div.withConfig({
 `;
 
 export const GwTag = styled.span`
-
   font-size: 13px;
   font-weight: 700;
   background: rgba(255, 255, 255, 0.25);
@@ -353,7 +350,6 @@ export const GwOverlay = styled.div`
 `;
 
 export const GwOverlayText = styled.span`
-
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.15em;
@@ -438,7 +434,6 @@ export const PfPhoto = styled.div`
 `;
 
 export const PfRole = styled.div`
-
   font-size: 12px;
   font-weight: 700;
   color: var(--slate);
@@ -482,7 +477,6 @@ export const PfStat = styled.div`
 `;
 
 export const PfStatNum = styled.div`
-
   font-weight: 700;
   font-size: 19px;
   color: var(--yellow-deep);
@@ -636,7 +630,7 @@ export const TagRow = styled.div`
 `;
 
 export const Tag = styled.span`
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.3);
   font-size: 12px;
   font-weight: 700;
   padding: 5px 12px;
@@ -677,7 +671,6 @@ export const ProgHead = styled.div<{ color: string }>`
 
 export const ProgNum = styled.span`
   font-size: 26px;
-
 
   .slash {
     font-weight: 400;
@@ -737,7 +730,6 @@ export const ProgPriceRow = styled.div`
 export const ProgPrice = styled.span`
   font-size: 26px;
   font-weight: 700;
-
 `;
 
 export const UpsellNote = styled.div`
@@ -857,7 +849,6 @@ export const CourseSave = styled.span`
 `;
 
 export const CourseTotal = styled.span`
-
   font-weight: 700;
   font-size: 26px;
 `;
@@ -978,7 +969,6 @@ export const FaqQ = styled.div`
 
 export const FaqMark = styled.span`
   color: var(--yellow);
-
 `;
 
 export const FaqA = styled.div<{ open?: boolean }>`

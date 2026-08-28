@@ -57,6 +57,7 @@ import {
   ContactBtn,
 } from './_styles';
 import Link from 'next/link';
+import { URLS } from '@/data/urls';
 import { CommLabHeader } from './_components/CommLabHeader';
 import { CommLabFooter } from './_components/CommLabFooter';
 import TopMainVisual from './_assets/top-main-visual.svg';
@@ -345,7 +346,7 @@ const CommunicationLab = () => {
             <ContactBtn variant="biz" disabled>
               Businessプログラム（準備中）
             </ContactBtn>
-            <ContactBtn variant="plain" href="https://forms.gle/q5X4HJAvN6ZwK3FU7" target="_blank" rel="noopener noreferrer">
+            <ContactBtn variant="plain" href={URLS.contactForm} target="_blank" rel="noopener noreferrer">
               お問い合わせ
             </ContactBtn>
           </ContactRow>
