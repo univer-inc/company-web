@@ -1,10 +1,20 @@
 import tw from 'twin.macro';
+import Link from 'next/link';
+import styled from 'styled-components';
+import { styleMixins } from '@/lib/styleMixin';
 import { Section } from '@/components/part/Section';
 import { Heading } from '@/components/part/Heading';
 import { TextBreak } from '@/lib/text';
 import { IntersectionFadeIn } from '@/components/effect/IntersectionFadeIn';
 
-const businessList: { index: number; title: string; description: string }[] = [
+type BusinessItem = {
+  index: number;
+  title: string;
+  description: string;
+  href?: string;
+};
+
+const businessList: BusinessItem[] = [
   {
     index: 1,
     title: 'Campus Everywhere構想の推進事業',
@@ -24,9 +34,10 @@ const businessList: { index: number; title: string; description: string }[] = [
   },
   {
     index: 4,
-    title: 'グローバル事業',
+    title: 'コミュニケーション・ラボ',
     description:
-      'アジア諸国の最新の現場視察研修ツアーをプランニングから実行まで支援します',
+      '自分の中にある考えや思いを引き出し、整理し、相手に届く言葉へ育てるコミュニケーションプログラムです。詳細は',
+    href: '/communication-lab',
   },
 ];
 
@@ -50,14 +61,19 @@ export const Business = () => {
           </BusinessItem>
         </IntersectionFadeIn>
         <BusinessListColumn>
-          {rest.map(({ index, title, description }, i) => (
+          {rest.map(({ index, title, description, href }, i) => (
             <IntersectionFadeIn key={title} delay={200 * i}>
               <BusinessItem>
                 <BusinessTitle>
                   <BusinessIndex>{index}</BusinessIndex>
                   <BusinessName>{title}</BusinessName>
                 </BusinessTitle>
-                <BusinessDescription>{description}</BusinessDescription>
+                <BusinessDescription>
+                  {description}
+                  {href && (
+                    <InlineLink href={href}>こちら</InlineLink>
+                  )}
+                </BusinessDescription>
               </BusinessItem>
             </IntersectionFadeIn>
           ))}
@@ -123,4 +139,12 @@ const BusinessName = tw.p`
 `;
 
 const BusinessDescription = tw.dd`
+`;
+
+const InlineLink = styled(Link)`
+  ${tw`
+    text-orange
+    underline
+  `}
+  ${styleMixins.hoverEffect}
 `;
