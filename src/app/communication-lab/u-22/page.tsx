@@ -323,7 +323,7 @@ const U22 = () => {
             </SecTitleJa>
           </SecTitle>
           <CoursesIntro>
-            「どれから受ければいいの?」と迷う方のために、目的別の3つのモデルコースをご用意しました。すべてのプログラムは「1コマ90分」で構成されているため、あなたのペースに合わせて無理なくステップアップできます。
+            「どれから受ければいいの?」と迷う方のために、目的別の3つのモデルコースをご用意しました。あなたのペースに合わせて無理なくステップアップできます。
           </CoursesIntro>
 
           <CourseCard popular>
@@ -508,7 +508,12 @@ const U22 = () => {
         <Wrap>
           <FinalCtaTitle>その一歩を、言葉にしに行こう。</FinalCtaTitle>
           <FinalCtaDesc>1dayから、無理なく始められます。</FinalCtaDesc>
-          <BtnPrimary href={URLS.applyForm} target="_blank" rel="noopener noreferrer" style={{ background: 'var(--yellow)' }}>
+          <BtnPrimary
+            href={URLS.applyForm}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ background: 'var(--yellow)' }}
+          >
             1DAYに申し込む(¥12,000・税込)
           </BtnPrimary>
         </Wrap>
