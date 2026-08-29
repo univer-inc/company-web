@@ -6,9 +6,16 @@ import { HeaderEl, Nav, Brand, NavLinks, NavCta } from '../_styles';
 
 type NavLink = { href: string; label: string };
 
+type CtaButton = {
+  href: string;
+  label: string;
+  target?: string;
+  rel?: string;
+};
+
 type CommLabHeaderProps = {
   navLinks?: NavLink[];
-  ctaButton?: { href: string; label: string };
+  ctaButton?: CtaButton;
 };
 
 export const CommLabHeader = ({
@@ -31,7 +38,11 @@ export const CommLabHeader = ({
             </a>
           ))}
         </NavLinks>
-        {ctaButton && <NavCta href={ctaButton.href}>{ctaButton.label}</NavCta>}
+        {ctaButton && (
+          <NavCta href={ctaButton.href} target={ctaButton.target} rel={ctaButton.rel}>
+            {ctaButton.label}
+          </NavCta>
+        )}
       </Nav>
     </HeaderEl>
   );

@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { URLS } from '@/data/urls';
 import {
   Wrap,
@@ -12,8 +11,8 @@ import {
 } from '../_styles';
 import { CommLabHeader } from '../_components/CommLabHeader';
 import { CommLabFooter } from '../_components/CommLabFooter';
+import { CommLabBreadcrumb } from '../_components/CommLabBreadcrumb';
 import {
-  Breadcrumb,
   HeroRipple,
   RippleSvg,
   HeroEyebrowU22,
@@ -101,14 +100,22 @@ const U22 = () => {
           { href: '#programs', label: 'プログラム' },
           { href: '#faq', label: 'よくある質問' },
         ]}
-        ctaButton={{ href: '#programs', label: '申込みへ進む' }}
+        ctaButton={{
+          href: URLS.applyForm,
+          label: '申込みへ進む',
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        }}
       />
 
       <Wrap>
-        <Breadcrumb>
-          <Link href="/communication-lab">コミュニケーション・ラボ</Link> ＞
-          U-22
-        </Breadcrumb>
+        <CommLabBreadcrumb
+          items={[
+            { href: '/', label: 'トップページ' },
+            { href: '/communication-lab', label: 'コミュニケーション・ラボ' },
+            { label: 'U-22' },
+          ]}
+        />
       </Wrap>
 
       <section>
@@ -177,7 +184,7 @@ const U22 = () => {
               このサイクルを繰り返しながら、本番でも自分の言葉で話せる力を身につけます。
             </HeroLeadU22>
             <CtaRow>
-              <BtnPrimary href="#programs">1DAY PROGRAMから始める →</BtnPrimary>
+              <BtnPrimary href="#programs">1DAY PROGRAMから始める</BtnPrimary>
               <BtnGhost href="#faq">よくある質問</BtnGhost>
             </CtaRow>
           </Wrap>
@@ -502,7 +509,7 @@ const U22 = () => {
           <FinalCtaTitle>その一歩を、言葉にしに行こう。</FinalCtaTitle>
           <FinalCtaDesc>1dayから、無理なく始められます。</FinalCtaDesc>
           <BtnPrimary href={URLS.applyForm} target="_blank" rel="noopener noreferrer" style={{ background: 'var(--yellow)' }}>
-            1DAYに申し込む(¥12,000・税込) →
+            1DAYに申し込む(¥12,000・税込)
           </BtnPrimary>
         </Wrap>
       </FinalCta>

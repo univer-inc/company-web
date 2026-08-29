@@ -12,45 +12,31 @@ import tw from 'twin.macro';
 
 const CommonContent = ({ content }: { content: PrivacyPolicyContent }) => {
   if (isString(content)) return content;
-  if (content.type === 'mixed-content')
-    return (
-      <MixedContent
-        key={content.content.toString()}
-        contents={content.content}
-      />
-    );
-  if (content.type === 'ordered-list')
-    return (
-      <OrderedList
-        key={content.content.toString()}
-        contents={content.content}
-      />
-    );
+  if (content.type === 'mixed-content') return <MixedContent contents={content.content} />;
+  if (content.type === 'ordered-list') return <OrderedList contents={content.content} />;
   return <></>;
 };
 
 type MixedContentProps = {
   contents: PrivacyPolicyContents;
-  key: string;
 };
 
-const MixedContent = ({ contents, key }: MixedContentProps) => {
-  return contents.map((item) => {
-    return <CommonContent key={key} content={item} />;
+const MixedContent = ({ contents }: MixedContentProps) => {
+  return contents.map((item, index) => {
+    return <CommonContent key={index} content={item} />;
   });
 };
 
 type OrderedListItemProps = {
   contents: PrivacyPolicyContents;
-  key: string;
 };
 
-const OrderedList = ({ contents, key }: OrderedListItemProps) => {
+const OrderedList = ({ contents }: OrderedListItemProps) => {
   return (
     <ol>
-      {contents.map((item) => {
+      {contents.map((item, index) => {
         return (
-          <li key={key}>
+          <li key={index}>
             <CommonContent content={item} />
           </li>
         );
@@ -60,21 +46,17 @@ const OrderedList = ({ contents, key }: OrderedListItemProps) => {
 };
 
 const Content = ({ content }: { content: PrivacyPolicyContents }) => {
-  return content.map((item) => {
+  return content.map((item, index) => {
     if (isString(item)) {
-      return <TextLine key={item}>{item}</TextLine>;
+      return <TextLine key={index}>{item}</TextLine>;
     }
 
     if (item.type === 'ordered-list') {
-      return (
-        <OrderedList key={item.content.toString()} contents={item.content} />
-      );
+      return <OrderedList key={index} contents={item.content} />;
     }
 
     if (item.type === 'mixed-content') {
-      return (
-        <MixedContent key={item.content.toString()} contents={item.content} />
-      );
+      return <MixedContent key={index} contents={item.content} />;
     }
   });
 };
@@ -88,7 +70,8 @@ const PrivacyPolicy = () => {
       </PageTitle>
       <Body>
         {privacyPolicy.map((unit, index) => {
-          if (typeof unit === 'string') return <TextLine>{unit}</TextLine>;
+          if (typeof unit === 'string')
+            return <TextLine key={index}>{unit}</TextLine>;
           // TODO: 再帰で書き直し
           return (
             <Unit key={unit.heading}>

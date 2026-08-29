@@ -60,6 +60,7 @@ import Link from 'next/link';
 import { URLS } from '@/data/urls';
 import { CommLabHeader } from './_components/CommLabHeader';
 import { CommLabFooter } from './_components/CommLabFooter';
+import { CommLabBreadcrumb } from './_components/CommLabBreadcrumb';
 import TopMainVisual from './_assets/top-main-visual.svg';
 import profileImg from './_assets/profile.jpg';
 
@@ -72,7 +73,22 @@ const CommunicationLab = () => {
           { href: '#programs', label: 'プログラム' },
           { href: '#profile', label: 'プロフィール' },
         ]}
+        ctaButton={{
+          href: URLS.applyForm,
+          label: '申込みへ進む',
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        }}
       />
+
+      <Wrap>
+        <CommLabBreadcrumb
+          items={[
+            { href: '/', label: 'トップページ' },
+            { label: 'コミュニケーション・ラボ' },
+          ]}
+        />
+      </Wrap>
 
       <Hero>
         <HeroBadge />
@@ -92,7 +108,7 @@ const CommunicationLab = () => {
                 <BtnGhost href="#about">
                   コミュニケーション・ラボについて
                 </BtnGhost>
-                <BtnPrimary href="#programs">プログラムを見る →</BtnPrimary>
+                <BtnPrimary href="#programs">プログラムを見る</BtnPrimary>
               </CtaRow>
             </HeroContent>
             <HeroVisual>
@@ -258,7 +274,7 @@ const CommunicationLab = () => {
                 <li>START DASH PROGRAM</li>
               </GwSub>
               <Link href="/communication-lab/u-22" style={{ textDecoration: 'none' }}>
-                <GwCta>U-22のプログラムを見る →</GwCta>
+                <GwCta>U-22のプログラムを見る</GwCta>
               </Link>
             </GwCard>
             <GwCard variant="biz" comingSoon>
@@ -276,7 +292,7 @@ const CommunicationLab = () => {
               <GwSub>
                 <li>PRESENTATION / PITCH PROGRAM</li>
               </GwSub>
-              <GwCta>Businessプログラムを見る →</GwCta>
+              <GwCta>Businessプログラムを見る</GwCta>
             </GwCard>
           </GwGrid>
         </Wrap>
