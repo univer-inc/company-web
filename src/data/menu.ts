@@ -1,6 +1,7 @@
 type MenuItem = {
   label: string;
   id: string;
+  href?: string;
 };
 
 export const menuData: MenuItem[] = [
@@ -19,6 +20,11 @@ export const menuData: MenuItem[] = [
   {
     label: 'お問い合わせ',
     id: 'contact',
+  },
+  {
+    label: 'コミュニケーション・ラボ',
+    id: 'communication-lab',
+    href: '/communication-lab',
   },
 ];
 

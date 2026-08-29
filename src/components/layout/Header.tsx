@@ -12,7 +12,8 @@ export const Header = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  const menuHref = (id: string) => `${pathname === '/' ? '' : '/'}#${id}`;
+  const menuHref = (item: (typeof menuData)[number]) =>
+    item.href ?? `${pathname === '/' ? '' : '/'}#${item.id}`;
 
   return (
     <Container>
@@ -23,9 +24,9 @@ export const Header = () => {
           </SiteLogo>
           <Menu>
             <MenuList>
-              {menuData.map(({ id, label }) => (
-                <li key={id}>
-                  <MenuItem href={menuHref(id)}>{label}</MenuItem>
+              {menuData.map((item) => (
+                <li key={item.id}>
+                  <MenuItem href={menuHref(item)}>{item.label}</MenuItem>
                 </li>
               ))}
             </MenuList>
@@ -57,13 +58,13 @@ export const Header = () => {
             </CloseButton>
           </MobileMenuHeader>
           <MobileMenuList>
-            {menuData.map(({ id, label }) => (
-              <li key={id}>
+            {menuData.map((item) => (
+              <li key={item.id}>
                 <MobileMenuItem
-                  href={menuHref(id)}
+                  href={menuHref(item)}
                   onClick={() => setIsOpen(false)}
                 >
-                  {label}
+                  {item.label}
                 </MobileMenuItem>
               </li>
             ))}
@@ -97,7 +98,7 @@ const Menu = tw.nav`
 const MenuList = tw.ul`
   flex
   justify-between
-  max-w-[600px]
+  max-w-[720px]
   gap-10
 `;
 
