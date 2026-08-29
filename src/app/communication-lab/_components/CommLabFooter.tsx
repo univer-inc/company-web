@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { URLS } from '@/data/urls';
-import { FooterEl, FootGrid, Wrap } from '../_styles';
+import { copyrightText } from '@/data/menu';
+import { FooterEl, FootGrid, FootCopy, Wrap } from '../_styles';
 
 type CommLabFooterProps = {
   leftText?: string;
@@ -17,13 +18,14 @@ export const CommLabFooter = ({
     <FooterEl>
       <Wrap>
         <FootGrid>
-          <div>{leftText}</div>
+          <Link href="/">{leftText}</Link>
           <div>
             <Link href={contactUrl} target="_blank" rel="noopener noreferrer">
               {rightText}
             </Link>
           </div>
         </FootGrid>
+        <FootCopy>{copyrightText}</FootCopy>
       </Wrap>
     </FooterEl>
   );

@@ -28,3 +28,5 @@ export const footerData: MenuItem[] = [
     id: 'privacy-policy',
   },
 ];
+
+export const copyrightText = `copyright ${new Date().getFullYear()} UNIVER Inc.`;

@@ -1,6 +1,6 @@
 'use client';
 import tw from 'twin.macro';
-import { footerData } from '@/data/menu';
+import { footerData, copyrightText } from '@/data/menu';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { styleMixins } from '@/lib/styleMixin';
@@ -11,9 +11,7 @@ export const Footer = () => {
       <Inner>
         <FooterNav>
           <FooterList>
-            <FooterListItem tw="text-sm">
-              copyright {new Date().getFullYear()} UNIVER Inc.
-            </FooterListItem>
+<FooterListItem tw="text-sm">{copyrightText}</FooterListItem>
             {footerData.map(({ id, label }) => (
               <FooterListItem key={id}>
                 <FooterLink href={`/${id}`}>{label}</FooterLink>

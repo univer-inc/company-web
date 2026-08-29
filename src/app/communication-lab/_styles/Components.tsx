@@ -345,7 +345,7 @@ export const GwOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 10;
 `;
 
@@ -549,6 +549,12 @@ export const FootGrid = styled.div`
   gap: 16px;
 `;
 
+export const FootCopy = styled.div`
+  text-align: center;
+  margin-top: 28px;
+  font-size: 11px;
+`;
+
 // --- Nav CTA Button ---
 export const NavCta = styled.a`
   background: var(--yellow);
@@ -560,6 +566,10 @@ export const NavCta = styled.a`
 
 // --- Breadcrumb ---
 export const Breadcrumb = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
   font-size: 12.5px;
   color: var(--slate);
   padding: 14px 0;
@@ -568,6 +578,15 @@ export const Breadcrumb = styled.div`
   a:hover {
     color: var(--green-dark);
   }
+
+  ${media.lg} {
+    font-size: 11.5px;
+    line-height: 1.7;
+  }
+`;
+
+export const CrumbSep = styled.span`
+  color: #b9b0a8;
 `;
 
 // --- Hero (U-22 variant) ---
