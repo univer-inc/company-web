@@ -17,7 +17,7 @@ export const PureFadeIn = styled.div<{
     ease-in-out
   `,
   $isShow ? tw`opacity-100 translate-y-0` : tw`opacity-0 translate-y-6`,
-  $scaling && $isShow ? tw`scale-100` : tw`scale-95`,
+  $scaling ? ($isShow ? tw`scale-100` : tw`scale-95`) : tw`scale-100`,
   isNumber($delay)
     ? css`
         transition-delay: ${$delay}ms;
