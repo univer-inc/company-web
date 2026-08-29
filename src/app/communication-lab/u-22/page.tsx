@@ -101,7 +101,12 @@ const U22 = () => {
           { href: '#programs', label: 'プログラム' },
           { href: '#faq', label: 'よくある質問' },
         ]}
-        ctaButton={{ href: '#programs', label: '申込みへ進む' }}
+        ctaButton={{
+          href: URLS.applyForm,
+          label: '申込みへ進む',
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        }}
       />
 
       <Wrap>

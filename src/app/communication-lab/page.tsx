@@ -72,6 +72,12 @@ const CommunicationLab = () => {
           { href: '#programs', label: 'プログラム' },
           { href: '#profile', label: 'プロフィール' },
         ]}
+        ctaButton={{
+          href: URLS.applyForm,
+          label: '申込みへ進む',
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        }}
       />
 
       <Hero>
