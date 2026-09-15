@@ -6,6 +6,11 @@ export type NewsItem = {
 
 export const newsData: NewsItem[] = [
   {
+    date: '2026.8.30',
+    title: '【お知らせ】新サービス　ウニベル コミュニケーション・ラボ　プレオープンのお知らせ',
+    url: '/news/press-release-20260830.pdf',
+  },
+  {
     date: '2026.6.4',
     title: '大学生の新たな学びと挑戦の機会を広げるために、学習支援塾ビーンズと連携事業に関する基本合意書を締結',
     url: '/news/press-release-20260604.pdf',
