@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Logo from '@/components/icon/logo.svg';
+import { trackCtaClick } from '@/lib/analytics';
 import { HeaderEl, Nav, Brand, NavLinks, NavCta } from '../_styles';
 
 type NavLink = { href: string; label: string };
@@ -11,6 +12,7 @@ type CtaButton = {
   label: string;
   target?: string;
   rel?: string;
+  track?: { location: string };
 };
 
 type CommLabHeaderProps = {
@@ -39,7 +41,19 @@ export const CommLabHeader = ({
           ))}
         </NavLinks>
         {ctaButton && (
-          <NavCta href={ctaButton.href} target={ctaButton.target} rel={ctaButton.rel}>
+          <NavCta
+            href={ctaButton.href}
+            target={ctaButton.target}
+            rel={ctaButton.rel}
+            onClick={() => {
+              if (!ctaButton.track) return;
+              trackCtaClick({
+                label: ctaButton.label,
+                location: ctaButton.track.location,
+                url: ctaButton.href,
+              });
+            }}
+          >
             {ctaButton.label}
           </NavCta>
         )}

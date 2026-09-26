@@ -78,6 +78,7 @@ const CommunicationLab = () => {
           label: '申込みへ進む',
           target: '_blank',
           rel: 'noopener noreferrer',
+          track: { location: 'comlab_header' },
         }}
       />
 

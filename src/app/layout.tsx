@@ -1,6 +1,8 @@
+import { PageViewTracker } from '@/components/analytics/PageViewTracker';
 import { LayoutShell } from '@/components/layout/LayoutShell';
 import { GlobalStyles } from '@/components/style/GlobalStyle';
 import StyledComponentsRegistry from '@/lib/registry';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,6 +16,8 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="ja">
       <head>
@@ -33,6 +37,8 @@ const RootLayout = ({
           <GlobalStyles />
           <LayoutShell>{children}</LayoutShell>
         </StyledComponentsRegistry>
+        {gaId && <GoogleAnalytics gaId={gaId} />}
+        <PageViewTracker />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { URLS } from '@/data/urls';
+import { trackCtaClick } from '@/lib/analytics';
 import {
   Wrap,
   SecTitle,
@@ -105,6 +106,7 @@ const U22 = () => {
           label: '申込みへ進む',
           target: '_blank',
           rel: 'noopener noreferrer',
+          track: { location: 'u22_header' },
         }}
       />
 
@@ -513,6 +515,13 @@ const U22 = () => {
             target="_blank"
             rel="noopener noreferrer"
             style={{ background: 'var(--yellow)' }}
+            onClick={() =>
+              trackCtaClick({
+                label: '1DAYに申し込む(¥12,000・税込)',
+                location: 'u22_final',
+                url: URLS.applyForm,
+              })
+            }
           >
             1DAYに申し込む(¥12,000・税込)
           </BtnPrimary>
