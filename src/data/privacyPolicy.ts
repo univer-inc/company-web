@@ -1,3 +1,5 @@
+import { company, companyAddress } from '@/data/company';
+
 export type PrivacyPolicyOrderedList = {
   type: 'ordered-list';
   content: PrivacyPolicyContents;
@@ -25,7 +27,7 @@ type PrivacyPolicyUnit =
 type PrivacyPolicy = PrivacyPolicyUnit[];
 
 export const privacyPolicy: PrivacyPolicy = [
-  '株式会社ウニベル（以下「当社」といいます。）は、当社がフィールドワークやコミュニケーション・ラボ（以下「本サービス」といいます。）を提供するにあたり、ご利用される皆様（以下「利用者」といいます。）の個人に関する情報（以下「個人情報」といいます。）を取得し、利用し、管理するにあたって、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。',
+  `${company.name}（以下「当社」といいます。）は、当社がフィールドワークやコミュニケーション・ラボ（以下「本サービス」といいます。）を提供するにあたり、ご利用される皆様（以下「利用者」といいます。）の個人に関する情報（以下「個人情報」といいます。）を取得し、利用し、管理するにあたって、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。`,
   {
     heading: '適用範囲',
     content: [
@@ -198,10 +200,10 @@ export const privacyPolicy: PrivacyPolicy = [
     heading: 'お問い合わせ',
     content: [
       '当社の個人情報の取扱いに関するご相談や苦情等のお問い合わせについては、下記の窓口にご連絡ください。',
-      '個人情報取扱事業者: 株式会社ウニベル',
-      '代表者名: 横山真輔',
-      '住所: 〒169-0051 東京都新宿区西早稲田1-22-3',
-      'Eメールアドレス: shinsuke.yokoyama(アットマーク)univer-inc.com',
+      `個人情報取扱事業者: ${company.name}`,
+      `代表者名: ${company.representative}`,
+      `住所: ${companyAddress}`,
+      `Eメールアドレス: ${company.email}`,
     ],
   },
 ];
