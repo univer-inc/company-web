@@ -517,7 +517,9 @@ export const ContactRow = styled.div`
   flex-wrap: wrap;
 `;
 
-export const ContactBtn = styled.a<{
+export const ContactBtn = styled.a.withConfig({
+  shouldForwardProp: (prop) => !['variant', 'disabled'].includes(prop),
+})<{
   variant: 'u22' | 'biz' | 'plain';
   disabled?: boolean;
 }>`
